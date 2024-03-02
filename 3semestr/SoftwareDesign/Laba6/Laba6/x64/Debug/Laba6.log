@@ -1,0 +1,13 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(17,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(26,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(30,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(33,37): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(36,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(39,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(42,36): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(46,37): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(52,37): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(55,37): warning C4305: =: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba6\Laba6\main.c(68,3): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+  Laba6.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Laba6\x64\Debug\Laba6.exe

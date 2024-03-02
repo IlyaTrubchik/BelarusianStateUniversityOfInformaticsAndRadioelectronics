@@ -1,0 +1,366 @@
+unit ValueConverterProg;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,ValueCOnverterFunctions, Vcl.StdCtrls,
+  Vcl.ExtCtrls, Vcl.Buttons, System.Actions, Vcl.ActnList, Vcl.Menus,datecalculator,historyunit;
+
+type
+  Tvalueconverterform = class(TForm)
+    panelCurrent: TPanel;
+    panelResult: TPanel;
+    cmbbCurrent: TComboBox;
+    cmbbLast: TComboBox;
+    labelCurrent: TLabel;
+    Label1: TLabel;
+    panelButtons1: TPanel;
+    panelButtons2: TPanel;
+    btnLength: TBitBtn;
+    btnVolume: TBitBtn;
+    btnWeight: TBitBtn;
+    btnTemperature: TBitBtn;
+    btnSquare: TBitBtn;
+    BtnEnergy: TBitBtn;
+    btnTime: TBitBtn;
+    editCurrent: TEdit;
+    editResult: TEdit;
+    labelCurrentValue: TLabel;
+    Panel1: TPanel;
+    btnNumber1: TBitBtn;
+    btnNumber2: TBitBtn;
+    btnNumber3: TBitBtn;
+    btnNumber4: TBitBtn;
+    btnNumber5: TBitBtn;
+    btnNumber6: TBitBtn;
+    btnNumber7: TBitBtn;
+    btnNumber8: TBitBtn;
+    btnNumber9: TBitBtn;
+    btnNumber0: TBitBtn;
+    btnDot: TBitBtn;
+    btnClear: TBitBtn;
+    btnClearOne: TBitBtn;
+    InputButtons: TActionList;
+    Number1: TAction;
+    Number2: TAction;
+    number3: TAction;
+    number4: TAction;
+    number5: TAction;
+    number6: TAction;
+    number7: TAction;
+    Number8: TAction;
+    number9: TAction;
+    number0: TAction;
+    Clear: TAction;
+    ClearOne: TAction;
+    Dot: TAction;
+    mmValueConverter: TMainMenu;
+    N1: TMenuItem;
+    ValueConverter: TMenuItem;
+    WorkWithDate: TMenuItem;
+    MainCalculator: TMenuItem;
+    btnConvert: TBitBtn;
+    btnHistory: TBitBtn;
+    btnMinus: TBitBtn;
+    actMinus: TAction;
+    procedure editCurrentClick(Sender: TObject);
+    procedure editResultClick(Sender: TObject);
+    procedure number0Execute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ClearOneExecute(Sender: TObject);
+    procedure ClearExecute(Sender: TObject);
+    procedure btnLengthClick(Sender: TObject);
+    procedure btnVolumeClick(Sender: TObject);
+    procedure btnWeightClick(Sender: TObject);
+    procedure btnTemperatureClick(Sender: TObject);
+    procedure btnSquareClick(Sender: TObject);
+    procedure BtnEnergyClick(Sender: TObject);
+    procedure btnTimeClick(Sender: TObject);
+    procedure WorkWithDateClick(Sender: TObject);
+    procedure MainCalculatorClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnConvertClick(Sender: TObject);
+    procedure btnHistoryClick(Sender: TObject);
+    procedure actMinusExecute(Sender: TObject);
+//    procedure N1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ConverterForm: Tvalueconverterform;
+  CurrentChosen:boolean;
+  startindex:integer;
+  historystring:string;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure Tvalueconverterform.actMinusExecute(Sender: TObject);
+begin
+if currentchosen=true then
+editcurrent.text:=editcurrent.text+'-'
+else
+editResult.text:=editresult.text+'-';
+end;
+//Обработчик нажатия на кнопку 'Конвертировать'
+procedure Tvalueconverterform.btnConvertClick(Sender: TObject);
+var bufs:string;
+num:extended;
+begin
+if currentchosen=true then //Если изменялось значение в поле для исходной величины
+bufs:=editcurrent.text
+else  //Если изменялось значение в поле для конечной величины
+bufs:=editresult.text;
+if bufs<>'' then
+begin
+if checkstr(bufs,startindex+cmbbcurrent.ItemIndex)=true then //Првоерка строки на корректность
+begin
+num:=strtofloat(bufs);
+//Получение, вывод и запись в историю результата конвертации
+if currentchosen=true then
+begin
+bufs:= convertQuantity(startindex+cmbbCurrent.ItemIndex,startindex+cmbbLast.ItemIndex,num,ValueConverterFunctions.converterarray);
+EditResult.text:=bufs;
+end
+else
+begin
+bufs:= convertQuantity(startindex+cmbbLast.ItemIndex,startindex+cmbbCurrent.ItemIndex,num,ValueConverterFunctions.converterarray);
+editcurrent.text:=bufs;
+end;
+historystring:='('+cmbbcurrent.items[cmbbCurrent.ItemIndex]+') '+editcurrent.text+'==>'+bufs+' ('+cmbbLast.items[cmbbLast.ItemIndex]+')';
+HistoryForm.lbHistory.Items.add(historystring);
+HistoryForm.lbHistory.items.add('');
+end
+else
+begin
+  if currentchosen=true then
+EditResult.text:='Uncorrect Data'
+else
+editcurrent.text:='Uncorrect Data';
+end;
+end
+else
+begin
+  if currentchosen=true then
+EditResult.text:='Uncorrect Data'
+else
+editcurrent.text:='Uncorrect Data';
+end;
+end;
+//Изменение величины на энергию и изменение списков единиц измерения
+procedure Tvalueconverterform.BtnEnergyClick(Sender: TObject);
+  var i:integer;
+begin
+ for i:=0 to 6 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[EnergyIndex+i].name;
+   cmbbLast.items[i]:=Converterarray[EnergyIndex+i].name;
+ end;
+for i := 7 to 9 do
+  begin
+    cmbbCurrent.items.Delete(7);
+    cmbbLast.items.Delete(7);
+  end;
+cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=energyindex;
+labelcurrentvalue.Caption:='Энергия';
+actMinus.Enabled:=false;
+end;
+//Переход на страницу истории
+procedure Tvalueconverterform.btnHistoryClick(Sender: TObject);
+begin
+converterform.Enabled:=false;
+converterform.visible:=false;
+HistoryForm.visible:=true;
+HistoryForm.Show;
+end;
+//Изменение величины на длину и изменение списков единиц измерения
+procedure Tvalueconverterform.btnLengthClick(Sender: TObject);
+var i:integer;
+begin
+ for i:=0 to 9 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[LengthIndex+i].name;
+   cmbbLast.items[i]:=Converterarray[LengthIndex+i].name;
+ end;
+ cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=lengthindex;
+labelcurrentvalue.Caption:='Длина';
+actMinus.Enabled:=false;
+
+ end;
+//Изменение величины на площадь и изменение списков единиц измерения
+procedure Tvalueconverterform.btnSquareClick(Sender: TObject);
+var i:integer;
+begin
+ for i:=0 to 9 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[SquareIndex+i].name;
+   cmbbLast.items[i]:=Converterarray[SquareIndex+i].name;
+ end;
+cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=squareindex;
+labelcurrentvalue.Caption:='Площадь';
+actMinus.Enabled:=false;
+ end;
+ //Изменение величины на температуру и изменение списков единиц измерения
+procedure Tvalueconverterform.btnTemperatureClick(Sender: TObject);
+var i:integer;
+begin
+for i:=0 to 2 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[TemperatureIndex+i].name;
+   cmbbLast.items[i]:=Converterarray[TemperatureIndex+i].name;
+ end;
+for i := 3 to 9 do
+  begin
+    cmbbCurrent.items.Delete(3);
+    cmbbLast.items.Delete(3);
+  end;
+ cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=temperatureindex;
+labelcurrentvalue.Caption:='Температура';
+actMinus.Enabled:=true;
+ end;
+//Изменение величины на время и изменение списков единиц измерения
+procedure Tvalueconverterform.btnTimeClick(Sender: TObject);
+    var i:integer;
+begin
+
+ for i:=0 to 7 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[TimeIndex+i].name;
+   cmbbLast.items[i]:=Converterarray[TimeIndex+i].name;
+ end;
+for i := 8 to 9 do
+  begin
+    cmbbCurrent.items.Delete(8);
+    cmbbLast.items.Delete(8);
+  end;
+ cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=timeindex;
+labelcurrentvalue.Caption:='Время';
+actMinus.Enabled:=false;
+ end;
+ //Изменение величины на объем и изменение списков единиц измерения
+procedure Tvalueconverterform.btnVolumeClick(Sender: TObject);
+var i:integer;
+begin
+for i:=0 to 9 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[VOlumeindex+i].name;
+   cmbbLast.items[i]:=Converterarray[VOlumeIndex+i].name;
+ end;
+cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=volumeindex;
+labelcurrentvalue.Caption:='Объем';
+actMinus.Enabled:=false;
+ end;
+ //Изменение величины на массу и изменение списков единиц измерения
+procedure Tvalueconverterform.btnWeightClick(Sender: TObject);
+var i:integer;
+begin
+  for i:=0 to 9 do
+ begin
+   cmbbCurrent.items[i]:=Converterarray[Weightindex+i].name;
+   cmbbLast.items[i]:=Converterarray[WeightIndex+i].name;
+ end;
+cmbbCurrent.ItemIndex:=0;
+cmbbLast.ItemIndex:=0;
+startindex:=weightindex;
+labelcurrentvalue.Caption:='Масса';
+actMinus.Enabled:=false;
+ end;
+
+//Обработчик нажатия для кнопки 'Очистить'
+procedure Tvalueconverterform.ClearExecute(Sender: TObject);
+begin
+if currentchosen=true then
+ editcurrent.text:=''
+ else
+ editresult.text:='';
+end;
+procedure Tvalueconverterform.ClearOneExecute(Sender: TObject);
+var bufs:string;
+begin
+  if currentchosen=true then
+  begin
+    bufs:=editCurrent.text;
+    delete(bufs,length(bufs),1);
+    editCurrent.text:=bufs;
+  end
+  else
+  begin
+    bufs:=editResult.Text;
+    delete(bufs,length(bufs),1);
+    Editresult.text:=bufs;
+  end;
+end;
+
+
+
+procedure Tvalueconverterform.editCurrentClick(Sender: TObject);
+begin
+ currentchosen:=true;
+
+end;
+
+
+
+
+procedure Tvalueconverterform.editResultClick(Sender: TObject);
+begin
+ currentchosen:=false;
+end;
+//Закрытие программного средства
+procedure Tvalueconverterform.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+(application).MainForm.close;
+end;
+
+procedure Tvalueconverterform.FormCreate(Sender: TObject);
+begin
+currentchosen:=true;
+startindex:=lengthindex;
+end;
+//Переход на страницу калькулятора-программиста
+procedure Tvalueconverterform.MainCalculatorClick(Sender: TObject);
+begin
+(application).MainForm.visible:=true;
+converterform.visible:=false;
+converterform.Enabled:=false;
+(application).MainForm.Enabled:=true;
+end;
+
+
+procedure Tvalueconverterform.number0Execute(Sender: TObject);
+begin
+if currentchosen=true then
+editcurrent.text:=editcurrent.text+(sender as taction).caption
+else
+editResult.text:=editresult.text+(sender as taction).caption;
+end;
+
+//Переход на страницу работы с датами
+procedure Tvalueconverterform.WorkWithDateClick(Sender: TObject);
+begin
+converterform.Visible:=false;
+converterform.Enabled:=false;
+workwithdateform.Visible:=true;
+workwithdateform.Enabled:=true;
+end;
+
+end.

@@ -1,0 +1,414 @@
+object workwithdateform: Tworkwithdateform
+  Left = 0
+  Top = 0
+  Caption = #1056#1072#1073#1086#1090#1072' '#1089' '#1076#1072#1090#1072#1084#1080
+  ClientHeight = 447
+  ClientWidth = 333
+  Color = 16774125
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = mmWorkwithdate
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 333
+    Height = 169
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    Color = 16774125
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    object cmbbDateFuncs: TComboBox
+      Left = 24
+      Top = 64
+      Width = 169
+      Height = 21
+      DropDownCount = 2
+      ItemIndex = 0
+      TabOrder = 0
+      Text = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1083#1080' '#1074#1099#1095#1077#1089#1090#1100' '#1076#1085#1080
+      OnChange = cmbbDateFuncsChange
+      Items.Strings = (
+        #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1083#1080' '#1074#1099#1095#1077#1089#1090#1100' '#1076#1085#1080
+        #1056#1072#1079#1085#1086#1089#1090#1100' '#1084#1077#1078#1076#1091' '#1076#1072#1090#1072#1084#1080)
+    end
+    object panelInputDateAddFunc: TPanel
+      Left = 0
+      Top = 91
+      Width = 218
+      Height = 88
+      BevelOuter = bvNone
+      Caption = 'panelInputDateAddFunc'
+      Color = 16774125
+      ParentBackground = False
+      ShowCaption = False
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 32
+        Top = 16
+        Width = 15
+        Height = 24
+        Caption = 'C'
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object dtpInput: TDateTimePicker
+        Left = 36
+        Top = 40
+        Width = 182
+        Height = 29
+        Date = 44682.000000000000000000
+        Time = 44682.000000000000000000
+        DateFormat = dfLong
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object panelCurrDate: TPanel
+      Left = 8
+      Top = 101
+      Width = 225
+      Height = 62
+      BevelOuter = bvNone
+      TabOrder = 2
+      Visible = False
+      object Panel3: TPanel
+        Left = -8
+        Top = 0
+        Width = 225
+        Height = 62
+        BevelOuter = bvNone
+        Color = 16774125
+        ParentBackground = False
+        TabOrder = 0
+        object labelCurrent: TLabel
+          Left = 32
+          Top = 0
+          Width = 22
+          Height = 24
+          Caption = #1057':'
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -21
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object dtpCurrent: TDateTimePicker
+          Left = 32
+          Top = 33
+          Width = 182
+          Height = 29
+          Date = 44682.000000000000000000
+          Time = 44682.000000000000000000
+          DateFormat = dfLong
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnCloseUp = dtpCurrentCloseUp
+        end
+      end
+    end
+  end
+  object panelOutputDateAddFunc: TPanel
+    Left = 0
+    Top = 344
+    Width = 333
+    Height = 103
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 16774125
+    ParentBackground = False
+    TabOrder = 1
+    object labelOutput: TLabel
+      Left = 24
+      Top = 24
+      Width = 51
+      Height = 24
+      Caption = #1044#1072#1090#1072':'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object labelResult: TLabel
+      Left = 81
+      Top = 29
+      Width = 4
+      Height = 19
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object panelDiffDatesResult: TPanel
+      Left = 0
+      Top = 0
+      Width = 297
+      Height = 103
+      BevelOuter = bvNone
+      Color = 16774125
+      ParentBackground = False
+      TabOrder = 0
+      Visible = False
+      object labelDiff: TLabel
+        Left = 32
+        Top = 0
+        Width = 87
+        Height = 24
+        Caption = #1056#1072#1079#1085#1080#1094#1072':'
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object labelDiffResult: TLabel
+        Left = 32
+        Top = 24
+        Width = 175
+        Height = 24
+        Caption = #1054#1076#1080#1085#1072#1082#1086#1074#1099#1077' '#1044#1072#1090#1099
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object labelAlldays: TLabel
+        Left = 32
+        Top = 48
+        Width = 4
+        Height = 19
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object btnHistory: TBitBtn
+      Left = 249
+      Top = 72
+      Width = 84
+      Height = 31
+      Caption = #1048#1089#1090#1086#1088#1080#1103
+      TabOrder = 1
+      OnClick = btnHistoryClick
+    end
+  end
+  object panelProcessAddFunc: TPanel
+    Left = 0
+    Top = 169
+    Width = 333
+    Height = 175
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'panelProcessAddFunc'
+    ShowCaption = False
+    TabOrder = 2
+    object Label3: TLabel
+      Left = 32
+      Top = 59
+      Width = 23
+      Height = 15
+      Caption = #1044#1085#1080
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 104
+      Top = 59
+      Width = 46
+      Height = 15
+      Caption = #1052#1077#1089#1103#1094#1099
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 176
+      Top = 59
+      Width = 26
+      Height = 15
+      Caption = #1043#1086#1076#1072
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object rbtnAdd: TRadioButton
+      Left = 24
+      Top = 16
+      Width = 97
+      Height = 17
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+      Checked = True
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object rbtSubtract: TRadioButton
+      Left = 136
+      Top = 16
+      Width = 97
+      Height = 17
+      Caption = #1042#1099#1095#1077#1089#1090#1100
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object editDays: TEdit
+      Left = 32
+      Top = 80
+      Width = 57
+      Height = 21
+      MaxLength = 8
+      TabOrder = 2
+      Text = '0'
+    end
+    object editMonths: TEdit
+      Left = 104
+      Top = 80
+      Width = 57
+      Height = 21
+      MaxLength = 8
+      TabOrder = 3
+      Text = '0'
+    end
+    object editYears: TEdit
+      Left = 176
+      Top = 80
+      Width = 57
+      Height = 21
+      MaxLength = 8
+      TabOrder = 4
+      Text = '0'
+    end
+    object btnComputeAddorSub: TBitBtn
+      Left = 80
+      Top = 110
+      Width = 100
+      Height = 43
+      Caption = #1053#1072#1081#1090#1080
+      TabOrder = 5
+      OnClick = btnComputeAddorSubClick
+    end
+  end
+  object panelDiffDates: TPanel
+    Left = 0
+    Top = 179
+    Width = 372
+    Height = 159
+    BevelOuter = bvNone
+    Color = 16774125
+    FullRepaint = False
+    ParentBackground = False
+    TabOrder = 3
+    Visible = False
+    object Panel2: TPanel
+      Left = 0
+      Top = 42
+      Width = 225
+      Height = 62
+      BevelOuter = bvNone
+      TabOrder = 0
+      object labelLast: TLabel
+        Left = 32
+        Top = 0
+        Width = 32
+        Height = 24
+        Caption = #1044#1086':'
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object dtpLast: TDateTimePicker
+        Left = 32
+        Top = 31
+        Width = 182
+        Height = 29
+        Date = 44682.000000000000000000
+        Time = 0.809326423608581500
+        DateFormat = dfLong
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        OnCloseUp = dtpLastCloseUp
+      end
+    end
+  end
+  object mmWorkwithdate: TMainMenu
+    Left = 8
+    Top = 8
+    object N1: TMenuItem
+      Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088#1099
+      object valueconverter: TMenuItem
+        Caption = #1055#1088#1077#1086#1073#1088#1072#1079#1086#1074#1072#1090#1077#1083#1100' '#1074#1077#1083#1080#1095#1080#1085
+        OnClick = valueconverterClick
+      end
+      object workwithdate: TMenuItem
+        Caption = #1042#1099#1095#1080#1089#1083#1077#1085#1080#1077' '#1076#1072#1090
+      end
+      object calculatorprogrammer: TMenuItem
+        Caption = #1055#1088#1086#1075#1088#1072#1084#1084#1080#1089#1090
+        OnClick = calculatorprogrammerClick
+      end
+    end
+  end
+end

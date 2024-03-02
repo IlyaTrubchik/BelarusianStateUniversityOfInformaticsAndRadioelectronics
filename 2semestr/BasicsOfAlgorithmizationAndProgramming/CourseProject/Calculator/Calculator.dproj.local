@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.794,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.577,C:\Users\Ilya\Documents\Embarcadero\Studio\Projects\Project5.dproj=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Calculator.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.157,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\ValueConverterFunctions.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.115,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.727,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\CalculatorProcedures.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.277,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.727,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\ValueConverterFunctions.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\ValueConverterFunctions.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.953,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryProcedures.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.595,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryProcedures.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.518,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\CalculatorForm.dfm=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\CalculatorForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryUnit.dfm=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.978,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryUnit.dfm=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\HistoryUnit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.010,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\CalculatorProcedures.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\CalculatorProcedures.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.782,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\DateCalculator.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.079,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\DateCalculator.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\DateCalculator.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryUnit.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.079,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\DateCalculator.dfm=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\DateCalculator.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.307,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\DateFunctions.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\DateFunctions.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.832,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\DateFunctions.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.978,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\HistoryUnit.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\HistoryUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\ValueConverterProg.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.957,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\ValueConverterProg.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\ValueConverterProg.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.957,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\ValueConverterProg.dfm=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\ValueConverterProg.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.234,=C:\Users\Ilya\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.518,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\CalculatorForm.pas=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\CalculatorForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\Calculator.dproj=C:\Users\Ilya\Desktop\Для Курсовой\Работа с датами\NewVersion\Calculator.dproj</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="CalculatorForm.pas"/>
+    <File Path="CalculatorForm.dfm"/>
+    <File Path="CalculatorProcedures.pas"/>
+    <File Path="DateCalculator.pas"/>
+    <File Path="DateCalculator.dfm"/>
+    <File Path="DateFunctions.pas"/>
+    <File Path="ValueConverterFunctions.pas"/>
+    <File Path="ValueConverterProg.pas"/>
+    <File Path="ValueConverterProg.dfm"/>
+    <File Path="HistoryUnit.pas"/>
+    <File Path="HistoryUnit.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

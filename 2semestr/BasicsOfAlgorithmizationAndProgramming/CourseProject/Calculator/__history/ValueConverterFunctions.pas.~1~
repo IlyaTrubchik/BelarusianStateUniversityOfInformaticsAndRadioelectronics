@@ -1,0 +1,135 @@
+unit ValueConverterFunctions;
+
+interface
+uses
+  System.SysUtils;
+
+type Quantities = record
+    name:string;
+    Value:extended;
+    end;
+
+Converter = array [1..58] of quantities;
+const  ConverterArray:converter=((Name:'Метр';Value:1),(Name:'Нанометр';Value:1000000000),(Name:'Километр';Value:0.001),(Name:'Сантиметр';Value:100),(Name:'Миллиметр';Value:1000),(Name:'Дюйм';Value:39.37008),(Name:'Фут';Value:3.28084),(Name:'Ярд';Value:1.093613),(Name:'Миля';Value:0.000621),(Name:'Микрон';Value:1000000 ),(Name:'Миллилитр';value:1),(Name:'Кубический Сантиметр';value:1),(Name:'Литр';value:0.001),(Name:'Кубический метр';value:0.000001),(Name:'Кубический Дюйм';value:0.061024),(Name:'Кубический Фут';value:0.000035),(Name:'Кубический Ярд';value:0.000001),(Name:'Кубический Дециметр';value:0.001),(Name:'Галлон(США)';value:0.000264),(Name:'Кварт(США)';value:0.001057),(Name:'Килограмм';value:1),(Name:'Карат';value:5000),(Name:'Миллиграмм';value:1000000),(Name:'Сантиграмм';value:100000),(Name:'Дециграмм';value:10000),(Name:'Грамм';value:1000),(Name:'Декаграмм';value:100),(Name:'Гектограмм';value:10),(Name:'Метрическая Тонна';value:0.001),(Name:'Фунт';value:2.204623),(Name:'Шкала Цельсия';value:0),(Name:'Шкала Фаренгейта';value:32),(Name:'Шкала Кельвина';value:273.15),(Name:'Квадратный метр';value:1),(Name:'Квадратный сантиметр';value:10000),(Name:'Квадратный миллиметр';value:1000000),(Name:'Гектар';value:0.0001),(Name:'Квадратный километр';value:0.000001),(Name:'Квадратный дюйм';value:1550.003),(Name:'Квадратный фут';value:10.76391),(Name:'Квадратный ярд';value:1.19599),(Name:'Акр';value:0.000247),(Name:'Квадратная миля';value:0.000000386102),(Name:'Джоуль';value:1),(Name:'Килоджоуль';value:0.001),(Name:'Калории';value:0.239006),(Name:'Пищевые Калории';value:0.000239),(Name:'Фут-фунт';value:0.737562),(Name:'Британска тепловая единица';value:0.000948),(Name:'Электрон-вольт';value:6241509000000000000),(Name:'Микросекунда';value:1),(Name:'Миллисекунда';value:0.001),(Name:'Секунда';value:0.000001),(Name:'Минута';value:0.0000000166),(Name:'Час';value:0.000000000277),(Name:'День';value:0.000000000011574),(Name:'Неделя';value:0.000000000001653),(Name:'Год';value:0.000000000000032));
+{
+N:
+Длина:1;
+Объем:11;
+Масса:21;
+Температура:31;
+Площадь:34;
+Энергия:44;
+Время:51;
+}
+const lengthIndex=1;
+VolumeIndex=11;
+WeightIndex=21;
+TemperatureIndex=31;
+SquareIndex=34;
+EnergyIndex=44;
+TimeIndex=51;
+function checkstr(s:string;index:integer):boolean;
+function convertQuantity(currindex,finalindex:integer;currvalue:extended;const quantity:converter):string;
+var n:integer;
+check:string;
+currval,finalval:integer;
+value:extended;
+implementation
+function convertQuantity(currindex,finalindex:integer;currvalue:extended;const quantity:converter):string;
+var finalvalue:extended;
+examplevalue1,examplevalue2:extended;
+begin
+finalvalue:=0;
+examplevalue1:=quantity[currindex].value;   //Помещаем экземплярное значение первой единицы измерения
+examplevalue2:=quantity[finalindex].value;  //Помещаем экземплярное значение второй единицы измерения
+if (currindex>=temperatureindex) and (currindex<=temperatureindex+2) then   //Если величина измерения- температура
+  begin
+    case currindex-temperatureindex of
+        0://цельсий
+        begin
+            case finalindex-temperatureindex of
+              0: finalvalue:=currvalue;
+              1:
+              begin
+                finalvalue:=examplevalue2+currvalue*1.8;
+              end;
+              2:
+              begin
+                finalvalue:=examplevalue2+currvalue;
+              end;
+            end;
+        end;
+        1://Фаренгейт
+        begin
+             case finalindex-temperatureindex of
+              0: finalvalue:=(currvalue-examplevalue1)*5/9;
+              1:
+              begin
+                 finalvalue:=currvalue;
+              end;
+              2:
+              begin
+                finalvalue:=(currvalue-examplevalue1)*5/9+examplevalue2;
+              end;
+            end;
+        end;
+        2:// кельвин
+        begin
+        case finalindex-temperatureindex of
+              0: finalvalue:=(currvalue-examplevalue1);
+              1:
+              begin
+                 finalvalue:=(currvalue-examplevalue1)*1.8+quantity[currindex-1].Value;
+              end;
+              2:
+
+              begin
+                finalvalue:=currvalue;
+              end;
+            end;
+        end;
+    end;
+        result:=floattostr(finalvalue);
+  end
+else        //В ином случае
+  begin
+    finalvalue:=(currvalue/examplevalue1)*examplevalue2; //Получаем значение исходного числа в новой величине измерения
+    result:=floattostr(finalvalue);
+  end;
+end;
+function checkstr(s:string;index:integer):boolean;
+var i:integer;
+dotcount:integer;
+begin
+result:=true;
+dotcount:=0;
+if (s[1]='-') and (index>= temperatureindex) and (index<= temperatureindex+2) then
+delete(s,1,1);
+   i:=1;
+  while (i<=length(s)) and (result=true) do
+  begin
+     if pos(s[i],'0123456789,')=0 then
+     result:=false
+     else
+     begin
+       if pos(s[i],'0123456789')<>0 then
+       begin
+       result:=true;
+       inc(i);
+       end
+       else
+       begin
+        inc(dotcount);
+        if dotcount>1 then
+         result:=false
+        else
+        inc(i);
+       end;
+     end;
+  end;
+if (result=true) and (dotcount=1)and ((length(s)<3) or (pos(s[pos(',',s)-1],'0123456789')=0) or (pos(s[pos(',',s)+1],'0123456789')=0)) then
+begin
+result:=false;
+end;
+end;
+end.

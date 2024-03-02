@@ -1,0 +1,24 @@
+﻿  main.c
+E:\SP\Lab2\Lab2\main.c(130,16): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(135,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(257,30): warning C4133: функция: несовместимые типы - из "TCHAR [1024]" в "const char *"
+E:\SP\Lab2\Lab2\main.c(218,9): warning C4101: rc: неиспользованная локальная переменная
+E:\SP\Lab2\Lab2\main.c(287,42): warning C4133: функция: несовместимые типы - из "LPWSTR" в "LPCSTR"
+E:\SP\Lab2\Lab2\main.c(331,14): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(332,13): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(333,18): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(334,19): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(354,49): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(355,53): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(378,94): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(386,44): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(393,93): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(397,106): warning C4244: =: преобразование "double" в "LONG", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(409,15): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(414,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(367,19): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(407,13): warning C4101: scrollInfo: неиспользованная локальная переменная
+E:\SP\Lab2\Lab2\main.c(424,63): warning C4244: функция: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(437,104): warning C4244: функция: преобразование "double" в "int", возможна потеря данных
+E:\SP\Lab2\Lab2\main.c(442,104): warning C4244: функция: преобразование "double" в "int", возможна потеря данных
+  Lab2.vcxproj -> E:\SP\Lab2\x64\Debug\Lab2.exe

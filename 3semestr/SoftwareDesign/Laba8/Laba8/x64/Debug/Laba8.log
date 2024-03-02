@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\Laba8\Laba8\main.c(23,23): warning C4020: ReadFile: слишком много фактических параметров
+C:\Users\Ilya\Desktop\C_projects\Laba8\Laba8\main.c(27,25): warning C4020: save_file: слишком много фактических параметров
+C:\Users\Ilya\Desktop\C_projects\Laba8\Laba8\main.c(60,21): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Ilya\Desktop\C_projects\Laba8\Laba8\main.c(107,7): warning C4013: strcmp: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Ilya\Desktop\C_projects\Laba8\Laba8\main.c(114,16): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Laba8.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Laba8\x64\Debug\Laba8.exe

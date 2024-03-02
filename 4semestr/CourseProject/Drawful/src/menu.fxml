@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="795.0" styleClass="background" stylesheets="Styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="134.60000610351562" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" maxHeight="62.59998168945313" minHeight="10.0" prefHeight="49.79999389648438" vgrow="SOMETIMES" />
+    <RowConstraints fillHeight="false" maxHeight="101.60000610351562" minHeight="0.0" prefHeight="42.400006103515636" vgrow="NEVER" />
+    <RowConstraints fillHeight="false" maxHeight="119.19999389648439" minHeight="10.0" prefHeight="53.60000000000002" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="219.1999938964844" minHeight="10.0" prefHeight="215.2" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="exitButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleExitGame" prefHeight="54.0" prefWidth="285.0" styleClass="buttons" text="Exit" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="startGameButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="54.0" prefWidth="284.0" styleClass="buttons" text="Start Game" textFill="#fff6f6" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Text onMouseClicked="#onChangeName" fx:id="nameText" fill="#1b1a1a" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: DEFAULT" wrappingWidth="310.13665771484375" GridPane.valignment="TOP">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</GridPane>

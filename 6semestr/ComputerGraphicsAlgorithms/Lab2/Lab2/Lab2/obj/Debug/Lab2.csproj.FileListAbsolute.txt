@@ -1,0 +1,16 @@
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.SuggestedBindingRedirects.cache
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\MainWindow.g.cs
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\App.g.cs
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2_MarkupCompile.cache
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2_MarkupCompile.lref
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\MainWindow.baml
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.g.resources
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+E:\Универ\6semestr\АКГ\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb

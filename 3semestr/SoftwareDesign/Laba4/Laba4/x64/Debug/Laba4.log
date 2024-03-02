@@ -1,0 +1,6 @@
+﻿  lab4.c
+C:\Users\Ilya\Desktop\C_projects\Laba4\Laba4\lab4.c(19,2): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Ilya\Desktop\C_projects\Laba4\Laba4\lab4.c(184,32): warning C4047: =: "char" отличается по уровням косвенного обращения от "char *"
+C:\Users\Ilya\Desktop\C_projects\Laba4\Laba4\lab4.c(150,19): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\Laba4\Laba4\lab4.c(151,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Laba4.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Laba4\x64\Debug\Laba4.exe

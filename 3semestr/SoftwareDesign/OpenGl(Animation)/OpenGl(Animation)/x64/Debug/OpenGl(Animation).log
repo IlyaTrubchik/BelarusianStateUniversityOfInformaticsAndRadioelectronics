@@ -1,0 +1,100 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(9,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(9,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(9,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(21,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(21,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(21,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(27,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(27,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(27,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(36,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(36,26): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(36,33): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(42,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(42,26): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(42,33): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(51,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(51,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(51,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(57,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(57,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(57,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(68,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(68,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(68,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(87,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(87,27): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(87,34): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(98,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(98,27): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(98,34): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(106,9): warning C4550: вычисление выражения дает функцию, в которой отсутствует список аргументов
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(123,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(123,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(125,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(126,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(127,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(128,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(129,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(130,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(133,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(134,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(135,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(136,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(137,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(138,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(141,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(142,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(143,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(144,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(145,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(146,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(149,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(149,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(149,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(150,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(151,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(152,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(153,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(154,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(155,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(161,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(161,27): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(161,34): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(163,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(164,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(168,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(168,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(168,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(170,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(171,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(172,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(173,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(174,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(175,23): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(178,19): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(178,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(178,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(181,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(182,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(183,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(185,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(186,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(187,24): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(189,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(189,33): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(190,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(190,33): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(191,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(191,32): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(193,22): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(193,33): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(194,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(194,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(195,21): warning C4244: функция: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(195,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(219,23): warning C4305: функция: усечение из "double" в "GLclampf"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(219,30): warning C4305: функция: усечение из "double" в "GLclampf"
+C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\OpenGl(Animation)\main.c(219,37): warning C4305: функция: усечение из "double" в "GLclampf"
+  OpenGl(Animation).vcxproj -> C:\Users\Ilya\Desktop\C_projects\OpenGl(Animation)\x64\Debug\OpenGl(Animation).exe

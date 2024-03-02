@@ -1,0 +1,4 @@
+﻿  main.c
+E:\SP\Lab1\TestBMP\TestBMP\main.c(40,6): warning C4101: hdc: неиспользованная локальная переменная
+E:\SP\Lab1\TestBMP\TestBMP\main.c(99,36): warning C4020: GetMessageW: слишком много фактических параметров
+  TestBMP.vcxproj -> E:\SP\Lab1\TestBMP\x64\Debug\TestBMP.exe

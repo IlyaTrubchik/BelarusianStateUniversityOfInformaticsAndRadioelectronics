@@ -1,0 +1,215 @@
+unit DateCalculator;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DateFunctions, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.ComCtrls, Vcl.WinXPickers, Vcl.Menus,historyunit, Vcl.Buttons ;
+
+type
+  Tworkwithdateform = class(TForm)
+    Panel1: TPanel;
+    panelOutputDateAddFunc: TPanel;
+    labelOutput: TLabel;
+    cmbbDateFuncs: TComboBox;
+    panelProcessAddFunc: TPanel;
+    rbtnAdd: TRadioButton;
+    rbtSubtract: TRadioButton;
+    editDays: TEdit;
+    editMonths: TEdit;
+    editYears: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    labelResult: TLabel;
+    panelInputDateAddFunc: TPanel;
+    Label1: TLabel;
+    panelCurrDate: TPanel;
+    panelDiffDates: TPanel;
+    Panel2: TPanel;
+    labelLast: TLabel;
+    dtpLast: TDateTimePicker;
+    panelDiffDatesResult: TPanel;
+    labelDiff: TLabel;
+    labelDiffResult: TLabel;
+    Panel3: TPanel;
+    labelCurrent: TLabel;
+    dtpCurrent: TDateTimePicker;
+    labelAlldays: TLabel;
+    mmWorkwithdate: TMainMenu;
+    N1: TMenuItem;
+    valueconverter: TMenuItem;
+    workwithdate: TMenuItem;
+    calculatorprogrammer: TMenuItem;
+    btnHistory: TBitBtn;
+    btnComputeAddorSub: TBitBtn;
+    dtpInput: TDateTimePicker;
+    procedure FormCreate(Sender: TObject);
+    procedure cmbbDateFuncsChange(Sender: TObject);
+    procedure valueconverterClick(Sender: TObject);
+    procedure calculatorprogrammerClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnHistoryClick(Sender: TObject);
+    procedure dtpCurrentCloseUp(Sender: TObject);
+    procedure dtpLastCloseUp(Sender: TObject);
+    procedure btnComputeAddorSubClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  workwithdateform: Tworkwithdateform;
+  days,years,months:integer;
+  number:string;
+  historystring:string;
+implementation
+
+{$R *.dfm}
+
+
+uses valueconverterprog;
+
+//Вывод результата функций добавить/вычесть дни , а также запис результата в историю
+procedure Tworkwithdateform.btnComputeAddorSubClick(Sender: TObject);
+var maxyears:integer;
+begin
+maxyears:=strtoint(copy(datetostr(dtpinput.date),7,4));
+days:=0;
+months:=0;
+years:=0;
+number:=editDays.text;
+if (checknum(editDays.text)=true) and (checknum(editYears.text)=true) and (checknum(editMonths.text)=true)  then
+begin
+days:=strtoint(editdays.text);
+months:=strtoint(editmonths.text);
+years:=strtoint(edityears.text);
+if rbtnAdd.checked=true then
+begin
+labelresult.Caption:=ResultOutput(DateFunctions.Sumdays(days,months,years,datetostr(dtpInput.date))) ;
+historystring:=datetostr(dtpinput.date)+'+'+inttostr(days)+' Дней'+' + '+inttostr(months)+' Месяцев '+' + '+inttostr(years)+' Лет ='+labelresult.Caption;
+HistoryForm.lbHistory.Items.add(historystring);
+HistoryForm.lbHistory.items.add('');
+end
+else
+begin
+if years>maxyears then
+labelresult.Caption:='Дата выходит за границы!'
+else
+begin
+labelresult.caption:= resultoutput(dateFunctions.Subtractdays(days,months,years,datetostr(dtpinput.date)));
+historystring:=datetostr(dtpinput.date)+'-'+inttostr(days)+' Дней'+' - '+inttostr(months)+' Месяцев '+' - '+inttostr(years)+' Лет ='+labelresult.Caption;
+HistoryForm.lbHistory.Items.add(historystring);
+HistoryForm.lbHistory.items.add('');
+end;
+end;
+end
+else
+labelresult.caption:='Ошибка!';
+end;
+//Переход на истории
+procedure Tworkwithdateform.btnHistoryClick(Sender: TObject);
+begin
+workwithdateform.Enabled:=false;
+workwithdateform.Visible:=false;
+HistoryForm.visible:=true;
+HistoryForm.Show;
+end;
+//Переход на страницу калькулятора-программиста
+procedure Tworkwithdateform.calculatorprogrammerClick(Sender: TObject);
+begin
+(application).MainForm.visible:=true;
+(application).Mainform.Enabled:=true;
+workwithdateform.Enabled:=false;
+workwithdateform.Visible:=false;
+end;
+//Переход между функциями добавления/вычитания и разницой между датами
+procedure Tworkwithdateform.cmbbDateFuncsChange(Sender: TObject);
+begin
+if cmbbDateFuncs.ItemIndex=1 then
+begin
+  panelInputDateAddFunc.visible:=false;
+  labeloutput.Visible:=false;
+  panelProcessAddFunc.Visible:=false;
+  labelresult.Visible:=false;
+  panelCurrDate.Visible:=true;
+  panelDiffDates.Visible:=true;
+  panelDiffDatesResult.Visible:=true;
+end
+else
+begin
+  panelInputDateAddFunc.visible:=true;
+  paneloutputdateaddfunc.visible:=true;
+  labeloutput.Visible:=true;
+  labelresult.Visible:=true;
+  panelProcessAddFunc.Visible:=true;
+  panelCurrDate.Visible:=false;
+  panelDiffDates.Visible:=false;
+  panelDiffDatesResult.Visible:=false;
+end;
+end;
+//Вывод результата разницы между датами и запись его в историю
+procedure Tworkwithdateform.dtpCurrentCloseUp(Sender: TObject);
+begin
+   if dtpCurrent.date<>dtpLast.date then
+ begin
+    DateFunctions.Diffresult:=DateFunctions.Difference(datetostr(dtpCurrent.date),datetostr(dtpLast.date));
+    labelDiffResult.Caption:=inttostr(DateFunctions.Diffresult.days)+' Дней '+inttostr(DateFunctions.Diffresult.weeks)+' Недель '+inttostr(DateFunctions.Diffresult.years)+' Лет';
+    labelAllDays.Caption:=inttostr(DateFunctions.Diffresult.AllDays)+' Дней ';
+    historystring:='Разница между:'+datetostr(dtpCurrent.date)+' и '+datetostr(dtpLast.date)+' = '+labeldiffresult.Caption+'('+inttostr(DateFunctions.Diffresult.AllDays)+' Дней '+')';
+    HistoryForm.lbHistory.Items.add(historystring);
+    HistoryForm.lbHistory.items.add('');
+ end
+ else
+ begin
+  labelDiffResult.Caption:='Одинаковые Даты';
+  labelAllDays.Caption:='';
+ end;
+end;
+
+
+//Вывод результата разницы между датами и запись его в историю
+procedure Tworkwithdateform.dtpLastCloseUp(Sender: TObject);
+begin
+  DateFunctions.Diffresult:=DateFunctions.Difference(datetostr(dtpCurrent.date),datetostr(dtpLast.date));                    if dtpCurrent.date<>dtpLast.date then
+ begin
+    DateFunctions.Diffresult:=DateFunctions.Difference(datetostr(dtpCurrent.date),datetostr(dtpLast.date));
+    labelDiffResult.Caption:=inttostr(DateFunctions.Diffresult.days)+' Дней '+inttostr(DateFunctions.Diffresult.weeks)+' Недель '+inttostr(DateFunctions.Diffresult.years)+' Лет';
+    labelAllDays.Caption:=inttostr(DateFunctions.Diffresult.AllDays)+' Дней ';
+    historystring:='Разница между:'+datetostr(dtpCurrent.date)+' и '+datetostr(dtpLast.date)+' = '+labeldiffresult.Caption+'('+inttostr(DateFunctions.Diffresult.AllDays)+' Дней '+')';
+    HistoryForm.lbHistory.Items.add(historystring);
+     HistoryForm.lbHistory.items.add('');
+ end
+ else
+ begin
+ labelDiffResult.Caption:='Одинаковые Даты';
+ labelAllDays.Caption:='';
+ end;
+end;
+//Закрытие программного средства
+procedure Tworkwithdateform.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+(application).MainForm.close;
+end;
+
+procedure Tworkwithdateform.FormCreate(Sender: TObject);
+var date:string;
+begin
+date:=datetostr(dtpinput.date);
+labelresult.Caption:=ResultOutput(date);
+end;
+
+
+//Переход на страницу преобразователя величин
+procedure Tworkwithdateform.valueconverterClick(Sender: TObject);
+begin
+converterform.Visible:=true;
+converterform.Enabled:=true;
+workwithdateform.Visible:=false;
+workwithdateform.enabled:=false;
+end;
+
+end.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="506.0" prefWidth="800.0" styleClass="background" stylesheets="Styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawingPageController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.20001220703125" minWidth="0.0" prefWidth="17.0" />
+      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="755.9999938964844" minWidth="10.0" prefWidth="741.6" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.20001220703125" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="93.59998168945313" minHeight="0.0" prefHeight="13.199997901916504" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" maxHeight="458.4000020980835" minHeight="10.0" prefHeight="454.40001220703124" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="164.60001220703128" minHeight="0.0" prefHeight="21.79998779296875" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="59.0" prefWidth="380.0" style="-fx-border-color: rgb(4, 162, 222); -fx-border-width: 3; -fx-background-color: rgba(184, 226, 242,0.8);" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <children>
+            <Text fx:id="drawingWord" fill="#84e35b" layoutX="42.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Word" wrappingWidth="303.20004882812486">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="70.0" prefWidth="378.0" style="-fx-border-color: rgb(4, 162, 222); -fx-border-width: 3; -fx-background-color: rgba(184, 226, 242,0.8);" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <children>
+            <ColorPicker fx:id="colorPicker" layoutX="38.0" layoutY="34.0" onAction="#changeColor">
+               <value>
+                  <Color />
+               </value></ColorPicker>
+            <Slider fx:id="brushSizeSlider" onMouseDragged="#changeBrushSize"  blockIncrement="1.0" layoutX="224.0" layoutY="40.0" min="1.0" value="10.0" />
+            <Text fill="#84e35b" fontSmoothingType="LCD" layoutX="224.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Толщина" wrappingWidth="108.5367431640625">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="398.0" prefWidth="169.0" style="-fx-border-color: rgb(4, 162, 222); -fx-border-width: 3; -fx-background-color: rgba(184, 226, 242,0.8);" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <children>
+            <Text fx:id="timerText" fill="#07e811" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time left: 60 secs" textAlignment="CENTER" wrappingWidth="150.0">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="392.0" prefWidth="587.0" style="-fx-border-color: rgb(4, 162, 222); -fx-border-width: 3; -fx-background-color: rgb(255,255,255);" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <children>
+            <Canvas fx:id="drawingArea" height="368.0" layoutX="6.0" layoutY="24.0" onMouseDragged="#handleBrushDrag" onMousePressed="#handleBrushPress" width="580.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

@@ -1,0 +1,14 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(75,7): warning C4101: pagenumber: неиспользованная локальная переменная
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(506,17): warning C4101: lastsubterm: неиспользованная локальная переменная
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(740,1): warning C4029: объявленный список формальных параметров отличается от объявления
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(821,40): warning C4047: функция: "node *" отличается по уровням косвенного обращения от "int"
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(821,35): warning C4024: deletetermin: различные типы для формального и фактического параметров 2
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(806,18): warning C4101: lastfoundedterm: неиспользованная локальная переменная
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(910,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(1098,2): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(559): warning C4715: chooseterm: значение возвращается не при всех путях выполнения
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(683): warning C4715: Foradding: значение возвращается не при всех путях выполнения
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(904): warning C4716: findtermbypage: должна возвращать значение
+C:\Users\Ilya\Desktop\C_projects\AISD_Objects\AISD_Objects\main.c(1016): warning C4715: checkterm: значение возвращается не при всех путях выполнения
+  AISD_Objects.vcxproj -> C:\Users\Ilya\Desktop\C_projects\AISD_Objects\x64\Debug\AISD_Objects.exe

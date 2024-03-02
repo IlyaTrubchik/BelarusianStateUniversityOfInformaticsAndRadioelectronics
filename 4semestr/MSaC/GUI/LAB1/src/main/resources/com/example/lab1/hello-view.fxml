@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1.HelloController">
+   <children>
+      <AnchorPane layoutX="9.0" prefHeight="310.0" prefWidth="470.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="342.0" AnchorPane.rightAnchor="455.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView id="operatorTable" layoutX="36.0" layoutY="15.0" prefHeight="279.0" prefWidth="398.0">
+               <columns>
+                  <TableColumn prefWidth="195.19997024536133" text="Уникальные операторы" />
+                  <TableColumn minWidth="6.399993896484375" prefWidth="201.6000213623047" text="Количество" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-7.0" layoutY="308.0" prefHeight="347.0" prefWidth="470.0" style="-fx-border-color: gray;">
+         <children>
+            <TableView id="operandTable" layoutX="36.0" layoutY="39.0" prefHeight="279.0" prefWidth="398.0">
+               <columns>
+                  <TableColumn prefWidth="191.19994735717773" text="Уникальные операнды" />
+                  <TableColumn prefWidth="207.20005798339844" text="Количество" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="463.0" prefHeight="652.0" prefWidth="438.0">
+         <children>
+            <Text layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Текст программы" wrappingWidth="158.93673706054688" />
+            <Button id="loadButton" layoutX="57.0" layoutY="567.0" mnemonicParsing="false" onAction="#loadFileClick" prefHeight="31.0" prefWidth="139.0" text="loadFile" />
+            <Button id="analyzeButton" layoutX="247.0" layoutY="567.0" mnemonicParsing="false" onAction="#analyzeClick" prefHeight="31.0" prefWidth="146.0" text="analyze" />
+            <TextField id="programDictionary" layoutX="18.0" layoutY="399.0" prefHeight="26.0" prefWidth="115.0" />
+            <TextArea id="programText" layoutX="18.0" layoutY="45.0" prefHeight="310.0" prefWidth="406.0" />
+            <Text layoutX="18.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Словарь программы" wrappingWidth="158.93673706054688" />
+            <TextField id="programVolume" layoutX="161.0" layoutY="399.0" prefHeight="26.0" prefWidth="115.0" />
+            <TextField id="programLength" layoutX="304.0" layoutY="399.0" prefHeight="26.0" prefWidth="115.0" />
+            <TextField id="operandDictionary" layoutX="57.0" layoutY="454.0" prefHeight="26.0" prefWidth="139.0" />
+            <TextField id="operatorDictionary" layoutX="246.0" layoutY="454.0" prefHeight="26.0" prefWidth="146.0" />
+            <TextField id="operatorCount" layoutX="247.0" layoutY="504.0" prefHeight="26.0" prefWidth="146.0" />
+            <TextField id="operandCount" layoutX="57.0" layoutY="504.0" prefHeight="26.0" prefWidth="139.0" />
+            <Text layoutX="161.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Объем программы" wrappingWidth="158.93673706054688" />
+            <Text layoutX="304.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Длина программы" wrappingWidth="158.93673706054688" />
+            <Text layoutX="63.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Словарь операндов" wrappingWidth="158.93673706054688" />
+            <Text layoutX="246.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Словарь операторов" wrappingWidth="126.13668823242188" />
+            <Text layoutX="247.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Общее число операторов" wrappingWidth="146.13668823242188" />
+            <Text layoutX="60.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Общее число операндов" wrappingWidth="146.13668823242188" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

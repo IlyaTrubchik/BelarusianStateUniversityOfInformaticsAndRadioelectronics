@@ -1,0 +1,35 @@
+.buttons:hover{
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(three-pass-box, rgb(228, 177, 10), 20 ,0, 0, 0);
+
+}
+.buttons{
+    -fx-font-weight: 500;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-border-color: rgb(242, 81, 56);
+    -fx-background-color: rgb(252, 156, 30);
+    -fx-border-width: 4;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+.background{
+    -fx-background-image: url('file:E:/KSIS/KursProject(Drawful)/DrawfulWithoutGradle/src/backgroundImage.jpg');
+}
+.toggleButton{
+    -fx-background-color: rgb(252, 156, 30);;
+    -fx-border-color: rgb(242, 81, 56);
+    -fx-border-width: 3px;
+    -fx-border-radius: 10;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+.toggleButton:selected{
+    -fx-background-color: rgb(242, 108, 5);
+    -fx-font-weight: 900;
+}
+
+

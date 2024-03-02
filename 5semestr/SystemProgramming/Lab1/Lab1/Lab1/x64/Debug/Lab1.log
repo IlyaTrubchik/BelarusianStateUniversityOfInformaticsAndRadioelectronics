@@ -1,0 +1,13 @@
+﻿  entryPoint.c
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(41,6): warning C4101: hdc: неиспользованная локальная переменная
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(185,14): warning C4244: =: преобразование "LONG" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(191,24): warning C4244: =: преобразование "LONG" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(197,26): warning C4244: =: преобразование "LONG" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(203,14): warning C4244: =: преобразование "LONG" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(213,8): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(214,8): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(284,16): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(284,19): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(287,16): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+E:\SP\Lab1\Lab1\Lab1\entryPoint.c(287,19): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+  Lab1.vcxproj -> E:\SP\Lab1\Lab1\x64\Debug\Lab1.exe

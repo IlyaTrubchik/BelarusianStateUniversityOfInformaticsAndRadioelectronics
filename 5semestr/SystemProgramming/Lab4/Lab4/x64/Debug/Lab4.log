@@ -1,0 +1,13 @@
+﻿  main.c
+E:\SP\Lab4\Lab4\main.c(68,68): warning C4113: "void (__cdecl *)()" отличается в списках параметров от "LPTHREAD_START_ROUTINE"
+E:\SP\Lab4\Lab4\main.c(68,68): warning C4133: функция: несовместимые типы - из "void (__cdecl *)()" в "LPTHREAD_START_ROUTINE"
+E:\SP\Lab4\Lab4\main.c(75,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\SP\Lab4\Lab4\main.c(136,62): warning C4113: "void (__cdecl *)()" отличается в списках параметров от "LPTHREAD_START_ROUTINE"
+E:\SP\Lab4\Lab4\main.c(136,62): warning C4133: функция: несовместимые типы - из "void (__cdecl *)()" в "LPTHREAD_START_ROUTINE"
+E:\SP\Lab4\Lab4\main.c(218,21): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+E:\SP\Lab4\Lab4\main.c(238,29): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+E:\SP\Lab4\Lab4\main.c(304,19): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+E:\SP\Lab4\Lab4\main.c(314,40): warning C4047: =: "char *" отличается по уровням косвенного обращения от "char **"
+E:\SP\Lab4\Lab4\main.c(301,1): warning C4305: инициализация: усечение из "double" в "float"
+E:\SP\Lab4\Lab4\main.c(312,1): warning C4047: инициализация: "char **" отличается по уровням косвенного обращения от "char *"
+  Lab4.vcxproj -> E:\SP\Lab4\x64\Debug\Lab4.exe

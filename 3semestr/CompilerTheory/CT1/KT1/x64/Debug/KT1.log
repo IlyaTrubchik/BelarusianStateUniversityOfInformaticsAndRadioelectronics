@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\KT1\KT1\main.c(12,2): warning C4013: CheckString: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Ilya\Desktop\C_projects\KT1\KT1\main.c(22,30): warning C4013: GetCharType: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Ilya\Desktop\C_projects\KT1\KT1\main.c(19,6): warning C4101: CharType: неиспользованная локальная переменная
+C:\Users\Ilya\Desktop\C_projects\KT1\KT1\main.c(32): warning C4716: CheckString: должна возвращать значение
+  KT1.vcxproj -> C:\Users\Ilya\Desktop\C_projects\KT1\x64\Debug\KT1.exe

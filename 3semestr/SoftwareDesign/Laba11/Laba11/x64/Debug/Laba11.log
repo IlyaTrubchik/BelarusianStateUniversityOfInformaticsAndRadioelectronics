@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\Laba11\Laba11\main.c(70,25): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\Laba11\Laba11\main.c(134,26): warning C4020: getmaxdepth: слишком много фактических параметров
+C:\Users\Ilya\Desktop\C_projects\Laba11\Laba11\main.c(104): warning C4716: show: должна возвращать значение
+C:\Users\Ilya\Desktop\C_projects\Laba11\Laba11\main.c(129): warning C4716: detour: должна возвращать значение
+  Laba11.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Laba11\x64\Debug\Laba11.exe

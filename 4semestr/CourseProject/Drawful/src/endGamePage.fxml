@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="800.0" styleClass="background" stylesheets="Styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="endGameController">
+   <children>
+      <ListView fx:id="scoreTable" layoutX="186.0" layoutY="40.0" prefHeight="338.0" prefWidth="426.0" style="-fx-font-size: 20; -fx-font-family: 'Comic Sans MS'; -fx-border-width: 3; -fx-border-color: rgb(4, 162, 222); -fx-background-color: rgba(184, 226, 242,0.8); -fx-text-fill: rgb(255,255,255);" AnchorPane.bottomAnchor="127.60000000000002" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="187.60000000000002" AnchorPane.topAnchor="40.0" />
+      <Button styleClass="buttons" fx:id="returnButton" layoutX="297.0" layoutY="401.0" mnemonicParsing="false" onAction="#menuClick" prefHeight="54.0" prefWidth="206.0" text="Return to menu" />
+   </children>
+</AnchorPane>

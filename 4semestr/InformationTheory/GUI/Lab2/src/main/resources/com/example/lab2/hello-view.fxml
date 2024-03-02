@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2.HelloController">
+   <children>
+      <TextArea fx:id="plainTextArea" layoutX="35.0" layoutY="89.0" prefHeight="411.0" prefWidth="282.0" wrapText="true" />
+      <Text layoutX="35.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Исходный " wrappingWidth="126.13669204711914" />
+      <TextArea fx:id="keyTextArea" layoutX="333.0" layoutY="89.0" prefHeight="411.0" prefWidth="282.0" wrapText="true" />
+      <Text layoutX="333.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ключ" wrappingWidth="126.13669204711914" />
+      <Text layoutX="624.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Зашифрованный " wrappingWidth="126.13669204711914" />
+      <TextArea fx:id="cypherTextArea" layoutX="624.0" layoutY="89.0" prefHeight="411.0" prefWidth="282.0" wrapText="true" />
+      <Button fx:id="openFileButton" layoutX="30.0" layoutY="26.0" mnemonicParsing="false" onAction="#onOpenFile" prefHeight="26.0" prefWidth="136.0" text="Загрузить файл" />
+      <Button fx:id="cypherButton" layoutX="177.0" layoutY="26.0" mnemonicParsing="false" onAction="#onCypher" prefHeight="26.0" prefWidth="194.0" text="Зашифровать/расшифровать" />
+      <TextField fx:id="registerTextField" layoutX="577.0" layoutY="26.0" prefHeight="26.0" prefWidth="356.0" promptText="Введите значение регистра(39 бит)" />
+      <Button fx:id="chooseFileButton" layoutX="378.0" layoutY="26.0" mnemonicParsing="false" onAction="#onChooseFile" prefHeight="26.0" prefWidth="194.0" text="Выбрать файл для сохранения" />
+   </children>
+</AnchorPane>

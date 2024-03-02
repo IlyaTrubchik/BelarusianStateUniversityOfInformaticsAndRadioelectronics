@@ -1,0 +1,620 @@
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/index.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 2
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:20:31 Europe/Minsk] PHP Fatal error:  Uncaught ArgumentCountError: str_replace() expects at least 3 arguments, 2 given in E:\WT\Main.php:6
+Stack trace:
+#0 E:\WT\Main.php(6): str_replace('food_types', false)
+#1 {main}
+  thrown in E:\WT\Main.php on line 6
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/index.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 2
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/footer.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 7
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_item.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 8
+[02-Apr-2023 14:21:34 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: str_replace(): Argument #2 ($replace) must be of type string when argument #1 ($search) is a string in E:\WT\Main.php:14
+Stack trace:
+#0 E:\WT\Main.php(14): str_replace('food_name', Array, '')
+#1 {main}
+  thrown in E:\WT\Main.php on line 14
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/index.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 2
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/footer.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 7
+[02-Apr-2023 14:23:12 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_item.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 8
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\index.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 2
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/footer.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 7
+[02-Apr-2023 14:24:39 Europe/Minsk] PHP Warning:  file_get_contents(/WebTech/Templates/food_item.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 8
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\index.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 2
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\footer.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 7
+[02-Apr-2023 14:25:24 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\food_item.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 8
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\header.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 3
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\readMore.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 4
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\recipes.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 5
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\food_types.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 6
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\footer.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 7
+[02-Apr-2023 14:26:22 Europe/Minsk] PHP Warning:  file_get_contents(\WebTech\Templates\food_item.html): Failed to open stream: No such file or directory in E:\WT\Main.php on line 8
+[03-Apr-2023 20:24:00 Europe/Minsk] PHP Warning:  file_get_contents(WebTech/Templates/food_menu.html): Failed to open stream: No such file or directory in E:\WT\recipes.php on line 5
+[03-Apr-2023 20:24:00 Europe/Minsk] PHP Warning:  file_get_contents(WebTech/Templates/properties.html): Failed to open stream: No such file or directory in E:\WT\recipes.php on line 7
+[03-Apr-2023 20:24:00 Europe/Minsk] PHP Warning:  file_get_contents(WebTech/Templates/menuItem.html): Failed to open stream: No such file or directory in E:\WT\recipes.php on line 8
+[03-Apr-2023 20:44:08 Europe/Minsk] PHP Fatal error:  Uncaught ArgumentCountError: str_replace() expects at least 3 arguments, 2 given in E:\WT\Main.php:12
+Stack trace:
+#0 E:\WT\Main.php(12): str_replace('styles', '/WebTech/styles...')
+#1 {main}
+  thrown in E:\WT\Main.php on line 12
+[04-Apr-2023 21:29:31 Europe/Minsk] PHP Warning:  preg_match(): Unknown modifier '+' in E:\WT\Main.php on line 23
+[04-Apr-2023 21:32:47 Europe/Minsk] PHP Warning:  preg_match(): Unknown modifier '+' in E:\WT\Main.php on line 23
+[04-Apr-2023 21:36:20 Europe/Minsk] PHP Warning:  preg_match(): Unknown modifier '+' in E:\WT\Main.php on line 23
+[04-Apr-2023 21:54:05 Europe/Minsk] PHP Warning:  preg_match(): Unknown modifier '+' in E:\WT\email_check.php on line 6
+[04-Apr-2023 21:55:44 Europe/Minsk] PHP Warning:  Undefined array key "email" in E:\WT\email_check.php on line 2
+[04-Apr-2023 21:55:44 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: checkEmail(): Argument #1 ($name) must be of type string, null given, called in E:\WT\email_check.php on line 3 and defined in E:\WT\email_check.php:4
+Stack trace:
+#0 E:\WT\email_check.php(3): checkEmail(NULL)
+#1 {main}
+  thrown in E:\WT\email_check.php on line 4
+[06-Apr-2023 20:26:55 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($str) must be of type string, array given in E:\WT\Main.php:20
+Stack trace:
+#0 {main}
+  thrown in E:\WT\Main.php on line 20
+[06-Apr-2023 21:03:41 Europe/Minsk] PHP Fatal error:  Uncaught ArgumentCountError: str_replace() expects at least 3 arguments, 2 given in E:\WT\Main.php:31
+Stack trace:
+#0 E:\WT\Main.php(31): str_replace('{recipeUrl}', 'FoodImg/number1...')
+#1 {main}
+  thrown in E:\WT\Main.php on line 31
+[06-Apr-2023 21:31:52 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:31:52 Europe/Minsk] PHP Warning:  Undefined array key "" in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:31:52 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:31:52 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:31:52 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:33:47 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:33:47 Europe/Minsk] PHP Warning:  Undefined array key "" in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:33:47 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:33:47 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:33:47 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:35:30 Europe/Minsk] PHP Warning:  Undefined array key 0 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:35:30 Europe/Minsk] PHP Warning:  Undefined array key 1 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:35:30 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:35:30 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:36:00 Europe/Minsk] PHP Warning:  Undefined array key 0 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:36:00 Europe/Minsk] PHP Warning:  Undefined array key 1 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:36:00 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:36:00 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:36:59 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:36:59 Europe/Minsk] PHP Warning:  Undefined array key "" in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:36:59 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:36:59 Europe/Minsk] PHP Warning:  Undefined variable $Desctiption in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:36:59 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Warning:  Undefined array key 0 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Warning:  Undefined array key 1 in E:\WT\recipes.php on line 18
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 23
+[06-Apr-2023 21:40:05 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\recipes.php on line 24
+[12-Apr-2023 19:35:53 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function formatMessage() in E:\WT\Main.php:33
+Stack trace:
+#0 {main}
+  thrown in E:\WT\Main.php on line 33
+[12-Apr-2023 19:38:36 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function formatMessage() in E:\WT\contact.php:32
+Stack trace:
+#0 {main}
+  thrown in E:\WT\contact.php on line 32
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Warning:  preg_replace(): Unknown modifier '+' in E:\WT\functions.php on line 7
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in E:\WT\functions.php on line 8
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Warning:  preg_replace(): Unknown modifier '(' in E:\WT\functions.php on line 8
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in E:\WT\functions.php on line 9
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Warning:  preg_replace(): No ending delimiter '-' found in E:\WT\functions.php on line 9
+[13-Apr-2023 18:04:45 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: formatMessage(): Return value must be of type string, null returned in E:\WT\functions.php:10
+Stack trace:
+#0 E:\WT\contact.php(29): formatMessage(NULL)
+#1 {main}
+  thrown in E:\WT\functions.php on line 10
+[26-Apr-2023 21:36:56 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in E:\WT\Main.php:17
+Stack trace:
+#0 E:\WT\Main.php(17): PDO->__construct('mysql:dname=cul...')
+#1 {main}
+  thrown in E:\WT\Main.php on line 17
+[26-Apr-2023 21:37:55 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foodtypes} WHERE `id`>0' at line 1 in E:\WT\Main.php:21
+Stack trace:
+#0 E:\WT\Main.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\Main.php on line 21
+[26-Apr-2023 21:38:51 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected in E:\WT\Main.php:21
+Stack trace:
+#0 E:\WT\Main.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\Main.php on line 21
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:40:55 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:02 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeName" in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 26
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Warning:  Undefined array key "typeIcon" in E:\WT\Main.php on line 27
+[26-Apr-2023 21:41:03 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\Main.php on line 27
+[26-Apr-2023 21:49:36 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in E:\WT\contact.php:21
+Stack trace:
+#0 E:\WT\contact.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\contact.php on line 21
+[02-May-2023 19:17:36 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in E:\WT\Main.php:18
+Stack trace:
+#0 E:\WT\Main.php(18): PDO->__construct('mysql:dbname=cu...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in E:\WT\Main.php on line 18
+[02-May-2023 19:18:35 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in E:\WT\Main.php:18
+Stack trace:
+#0 E:\WT\Main.php(18): PDO->__construct('mysql:dbname=cu...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in E:\WT\Main.php on line 18
+[02-May-2023 20:29:04 Europe/Minsk] PHP Warning:  Undefined array key "email" in E:\WT\authorization.php on line 4
+[02-May-2023 20:29:04 Europe/Minsk] PHP Warning:  Undefined array key "password" in E:\WT\authorization.php on line 5
+[02-May-2023 20:29:04 Europe/Minsk] PHP Warning:  Undefined array key "flag" in E:\WT\authorization.php on line 6
+[02-May-2023 20:29:04 Europe/Minsk] PHP Warning:  Undefined array key "flag" in E:\WT\authorization.php on line 23
+[02-May-2023 20:29:17 Europe/Minsk] PHP Warning:  Undefined array key "email" in E:\WT\authorization.php on line 4
+[02-May-2023 20:29:17 Europe/Minsk] PHP Warning:  Undefined array key "password" in E:\WT\authorization.php on line 5
+[02-May-2023 20:29:17 Europe/Minsk] PHP Warning:  Undefined array key "flag" in E:\WT\authorization.php on line 6
+[02-May-2023 20:29:17 Europe/Minsk] PHP Warning:  Undefined array key "flag" in E:\WT\authorization.php on line 23
+[02-May-2023 20:31:02 Europe/Minsk] PHP Warning:  Undefined array key "password" in E:\WT\authorization.php on line 5
+[02-May-2023 20:31:02 Europe/Minsk] PHP Deprecated:  hash(): Passing null to parameter #2 ($data) of type string is deprecated in E:\WT\authorization.php on line 34
+[02-May-2023 20:55:42 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type bool in E:\WT\authorization.php on line 30
+[02-May-2023 21:03:53 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in E:\WT\authorization.php:40
+Stack trace:
+#0 E:\WT\Main.php(2): include()
+#1 {main}
+  thrown in E:\WT\authorization.php on line 40
+[02-May-2023 21:12:40 Europe/Minsk] PHP Warning:  Undefined array key "userID" in E:\WT\authorization.php on line 20
+[02-May-2023 21:12:40 Europe/Minsk] PHP Deprecated:  setcookie(): Passing null to parameter #2 ($value) of type string is deprecated in E:\WT\authorization.php on line 20
+[02-May-2023 21:12:40 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:20) in E:\WT\authorization.php on line 20
+[02-May-2023 21:12:40 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:20) in E:\WT\authorization.php on line 21
+[02-May-2023 22:18:51 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 E:\WT\recipes.php(2): include()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:23:17 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:23:21 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:23:23 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:24:03 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:24:41 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:26:18 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:26:22 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendMessage() in E:\WT\buyProduct.php:2
+Stack trace:
+#0 {main}
+  thrown in E:\WT\buyProduct.php on line 2
+[02-May-2023 22:30:09 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:30:11 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:30:30 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:30:57 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:31:20 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:32:22 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[02-May-2023 22:32:53 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'orders.PRIMARY' in E:\WT\buyProduct.php:32
+Stack trace:
+#0 E:\WT\buyProduct.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 32
+[08-May-2023 16:42:47 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in E:\WT\Main.php:19
+Stack trace:
+#0 E:\WT\Main.php(19): PDO->__construct('mysql:dbname=cu...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in E:\WT\Main.php on line 19
+[08-May-2023 16:42:59 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in E:\WT\Main.php:19
+Stack trace:
+#0 E:\WT\Main.php(19): PDO->__construct('mysql:dbname=cu...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in E:\WT\Main.php on line 19
+[08-May-2023 17:40:12 Europe/Minsk] PHP Warning:  Undefined array key "type" in E:\WT\logorreg.php on line 16
+[08-May-2023 17:40:12 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\logorreg.php on line 16
+[08-May-2023 17:41:58 Europe/Minsk] PHP Warning:  Undefined array key "type" in E:\WT\logorreg.php on line 16
+[08-May-2023 17:41:58 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\logorreg.php on line 16
+[08-May-2023 17:42:42 Europe/Minsk] PHP Warning:  Undefined array key "type" in E:\WT\logorreg.php on line 16
+[08-May-2023 17:42:42 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in E:\WT\logorreg.php on line 16
+[08-May-2023 17:44:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Array callback must have exactly two elements in E:\WT\logorreg.php:13
+Stack trace:
+#0 {main}
+  thrown in E:\WT\logorreg.php on line 13
+[08-May-2023 17:44:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Array callback must have exactly two elements in E:\WT\logorreg.php:13
+Stack trace:
+#0 {main}
+  thrown in E:\WT\logorreg.php on line 13
+[08-May-2023 17:59:02 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 17:59:02 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:00:06 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:00:06 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:08:52 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:08:52 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:11:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:11:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:12:03 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:12:03 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:12:49 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:12:49 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:16:09 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\login.php:13) in E:\WT\authorization.php on line 21
+[08-May-2023 18:16:09 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\login.php:13) in E:\WT\authorization.php on line 22
+[08-May-2023 18:25:34 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 21
+[08-May-2023 18:25:34 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 22
+[08-May-2023 18:25:34 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\authorization.php:1) in E:\WT\authorization.php on line 24
+[08-May-2023 18:25:55 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\authorization.php on line 23
+[08-May-2023 18:26:27 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:33) in E:\WT\functions.php on line 46
+[08-May-2023 18:26:27 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:33) in E:\WT\functions.php on line 47
+[08-May-2023 18:26:27 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:33) in E:\WT\authorization.php on line 20
+[08-May-2023 18:26:27 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:33) in E:\WT\authorization.php on line 21
+[08-May-2023 18:40:21 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\quit.php on line 6
+[08-May-2023 18:42:54 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\quit.php on line 5
+[08-May-2023 18:42:59 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\quit.php on line 5
+[08-May-2023 18:49:56 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\authorization.php on line 23
+[08-May-2023 18:53:34 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:36 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:53:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:55:00 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:55:03 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:55:10 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 18:55:12 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\buyProduct.php on line 32
+[08-May-2023 19:29:50 Europe/Minsk] PHP Fatal error:  Cannot redeclare formatMessage() (previously declared in E:\WT\functions.php:2) in E:\WT\functions.php on line 2
+[08-May-2023 19:30:21 Europe/Minsk] PHP Fatal error:  Cannot redeclare formatMessage() (previously declared in E:\WT\functions.php:2) in E:\WT\functions.php on line 2
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(./phpmailer/Exception.php): Failed to open stream: No such file or directory in E:\WT\mail.php on line 4
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(): Failed opening './phpmailer/Exception.php' for inclusion (include_path='.;C:\php\pear') in E:\WT\mail.php on line 4
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(./phpmailer/PHPMailer.php): Failed to open stream: No such file or directory in E:\WT\mail.php on line 5
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(): Failed opening './phpmailer/PHPMailer.php' for inclusion (include_path='.;C:\php\pear') in E:\WT\mail.php on line 5
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(./phpmailer/SMTP.php): Failed to open stream: No such file or directory in E:\WT\mail.php on line 6
+[08-May-2023 19:31:00 Europe/Minsk] PHP Warning:  include(): Failed opening './phpmailer/SMTP.php' for inclusion (include_path='.;C:\php\pear') in E:\WT\mail.php on line 6
+[08-May-2023 19:33:14 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:33:16 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:34:50 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:35:38 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:15 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:20 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:20 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:20 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:20 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:37:27 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 14
+[08-May-2023 19:38:40 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function getUserEmail() in E:\WT\mail.php:25
+Stack trace:
+#0 {main}
+  thrown in E:\WT\mail.php on line 25
+[08-May-2023 19:38:52 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type bool in E:\WT\functions.php on line 20
+[08-May-2023 19:38:52 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: getUserEmail(): Return value must be of type string, null returned in E:\WT\functions.php:20
+Stack trace:
+#0 E:\WT\mail.php(25): getUserEmail()
+#1 {main}
+  thrown in E:\WT\functions.php on line 20
+[08-May-2023 19:39:33 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate. in E:\WT\phpmailer\PHPMailer.php:2212
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(35): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2212
+[08-May-2023 19:42:00 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (From): userEmail in E:\WT\phpmailer\PHPMailer.php:1324
+Stack trace:
+#0 E:\WT\mail.php(24): PHPMailer\PHPMailer\PHPMailer->setFrom('userEmail')
+#1 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 1324
+[08-May-2023 19:42:30 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate. in E:\WT\phpmailer\PHPMailer.php:2212
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2212
+[08-May-2023 19:47:19 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate. in E:\WT\phpmailer\PHPMailer.php:2212
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2212
+[08-May-2023 19:48:34 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate. in E:\WT\phpmailer\PHPMailer.php:2212
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2212
+[08-May-2023 19:51:12 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in E:\WT\phpmailer\PHPMailer.php:2233
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2233
+[08-May-2023 19:51:38 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate. in E:\WT\phpmailer\PHPMailer.php:2212
+Stack trace:
+#0 E:\WT\phpmailer\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 E:\WT\phpmailer\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Mon, 8 Ma...', 'test message\r\n')
+#2 E:\WT\phpmailer\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 2212
+[08-May-2023 20:01:09 Europe/Minsk] PHP Fatal error:  Cannot redeclare formatMessage() (previously declared in E:\WT\functions.php:2) in E:\WT\functions.php on line 2
+[08-May-2023 20:01:12 Europe/Minsk] PHP Fatal error:  Cannot redeclare formatMessage() (previously declared in E:\WT\functions.php:2) in E:\WT\functions.php on line 2
+[08-May-2023 20:02:01 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:02:05 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:test...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:04:52 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:04:55 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:06:12 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:06:16 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:07:59 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:08:00 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:08:16 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:18
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 18
+[08-May-2023 20:08:35 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:35 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:37 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:37 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:38 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:38 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:39 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:39 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:39 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:39 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:08:39 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\WT\functions.php:23) in E:\WT\mail.php on line 18
+[08-May-2023 20:08:39 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(33): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:09:43 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(32): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:11:37 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function getUserEmail() in E:\WT\mail.php:30
+Stack trace:
+#0 {main}
+  thrown in E:\WT\mail.php on line 30
+[08-May-2023 20:11:56 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type bool in E:\WT\functions.php on line 20
+[08-May-2023 20:11:56 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: getUserEmail(): Return value must be of type string, null returned in E:\WT\functions.php:20
+Stack trace:
+#0 E:\WT\mail.php(30): getUserEmail()
+#1 {main}
+  thrown in E:\WT\functions.php on line 20
+[08-May-2023 20:12:19 Europe/Minsk] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (From): abaoba in E:\WT\phpmailer\PHPMailer.php:1324
+Stack trace:
+#0 E:\WT\mail.php(30): PHPMailer\PHPMailer\PHPMailer->setFrom('abaoba')
+#1 {main}
+  thrown in E:\WT\phpmailer\PHPMailer.php on line 1324
+[08-May-2023 20:13:52 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(32): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:14:05 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\mail.php:19
+Stack trace:
+#0 E:\WT\buyProduct.php(32): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\mail.php on line 19
+[08-May-2023 20:15:27 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\buyProduct.php:49
+Stack trace:
+#0 E:\WT\buyProduct.php(39): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 49
+[08-May-2023 20:16:22 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\buyProduct.php:64
+Stack trace:
+#0 E:\WT\buyProduct.php(54): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 64
+[08-May-2023 20:16:33 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\buyProduct.php:64
+Stack trace:
+#0 E:\WT\buyProduct.php(54): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 64
+[08-May-2023 20:17:20 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\buyProduct.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(66): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 14
+[08-May-2023 20:17:32 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function cookiesAreSet() in E:\WT\buyProduct.php:14
+Stack trace:
+#0 E:\WT\buyProduct.php(66): sendMailMessage('Order from:ilya...')
+#1 {main}
+  thrown in E:\WT\buyProduct.php on line 14
+[10-May-2023 19:22:22 Europe/Minsk] PHP Warning:  preg_match(): No ending delimiter '^' found in E:\WT\functions.php on line 13
+[18-May-2023 18:58:44 Europe/Minsk] PHP Fatal error:  Cannot redeclare formatMessage() (previously declared in E:\WT\functions.php:2) in E:\WT\functions.php on line 2
+[18-May-2023 20:25:28 Europe/Minsk] PHP Warning:  file_get_contents(/Templates/403.html): Failed to open stream: No such file or directory in E:\WT\403.php on line 3

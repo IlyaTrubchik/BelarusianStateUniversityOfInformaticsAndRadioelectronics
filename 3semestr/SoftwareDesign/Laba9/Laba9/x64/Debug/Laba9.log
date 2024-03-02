@@ -1,0 +1,8 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(95,22): warning C4305: функция: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(96,21): warning C4305: функция: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(97,21): warning C4305: функция: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(99,22): warning C4305: функция: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(100,21): warning C4305: функция: усечение из "double" в "float"
+C:\Users\Ilya\Desktop\C_projects\Laba9\Laba9\main.c(68): warning C4715: findfirstpositive: значение возвращается не при всех путях выполнения
+  Laba9.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Laba9\x64\Debug\Laba9.exe

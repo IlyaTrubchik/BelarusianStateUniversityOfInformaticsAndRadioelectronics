@@ -1,0 +1,120 @@
+
+<main>
+    <div class="menuMain"  style="background-image: url(/WebTech/FoodImg/contactUs2.jpg)">
+        <h1> OUR MENU </h1>
+    </div>
+    <section class="Menu">
+        <h2>Menu</h2>
+        <div class="Menu-container">
+            <div class="left-side">
+                <div class="propertyItem">
+                    <h3>Availability</h3>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>In stock</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="OutOfStock">
+                        <p>Out of stock</p>
+                    </div>
+                </div>
+                <div class="propertyItem">
+                    <h3>Product Type</h3>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Salad</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Cake</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Burger</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Ice-cream</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Hot-dog</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Cookies</P>
+                    </div>
+                </div>
+                <div class="propertyItem">
+                    <h3>Size</h3>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Small</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Medium</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Big</P>
+                    </div>
+                </div>
+                <div class="propertyItem">
+                    <h3>Time</h3>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Up to 30 minutes</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Up to 45 minutes</P>
+                    </div>
+                    <div class="CheckBox">
+                        <input type="checkbox" name="InStock">
+                        <P>Up to 60 minutes</P>
+                    </div>
+                </div>
+                <button class="propertyBtn">
+                    Search
+                </button>
+            </div>
+            <div class="right-side">
+                <div class="menuItems">
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                    {menuItem}
+                </div>
+                <div class="listButtons">
+                    <button class="prev-nextBtn">Preview</button>
+                    <button class="numberBtn" style="background-color: rgb(240, 158, 36); color:white;" >1</button>
+                    <button class="numberBtn">2</button>
+                    <button class="numberBtn">3</button>
+                    <button class="dotBtn"> ... </button>
+                    <button class="numberBtn">20</button>
+                    <button class="prev-nextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function buttonClick(id){
+     //  alert("ABOBA");
+        var hr = new XMLHttpRequest();
+        hr.open("POST","buyProduct.php",true);
+        hr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        hr.send("id="+id);
+    }
+</script>

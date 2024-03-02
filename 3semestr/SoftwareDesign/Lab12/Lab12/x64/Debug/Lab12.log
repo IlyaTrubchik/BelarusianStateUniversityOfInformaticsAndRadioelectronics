@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\Ilya\Desktop\C_projects\Lab12\Lab12\main.c(92,25): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Ilya\Desktop\C_projects\Lab12\Lab12\main.c(126): warning C4716: show: должна возвращать значение
+  Lab12.vcxproj -> C:\Users\Ilya\Desktop\C_projects\Lab12\x64\Debug\Lab12.exe

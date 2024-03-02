@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  dllFunc.cpp
+  dllmain.cpp
+  Создание кода...
+     Создается библиотека E:\SP\Lab3\x64\Debug\dll.lib и объект E:\SP\Lab3\x64\Debug\dll.exp
+  dll.vcxproj -> E:\SP\Lab3\x64\Debug\dll.dll

@@ -1,0 +1,1263 @@
+unit CalculatorProcedures;
+
+interface
+ uses  System.SysUtils;
+ type
+  Tstack = ^Sstack;
+  Sstack = record
+    data:string;
+    next:tstack;
+    priority:integer;
+    end;
+  TROperation = record
+    data:string;
+    priority:integer;
+  end;
+  shale = procedure (var s:string);
+  function MathInDecNew(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+  function MathInOCt(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+  function MathInHEx(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+  procedure reversestr(var s:string);
+  function sor(s1,s2:string):string;
+  function sxor(s1,s2:string):string;
+  function sand(s1,s2:string):string;
+  function indec(a:string;curr:integer):integer;
+  function convertss(a:string;curr:integer;n:integer):string;
+  function diff(s1,s2:string;n:integer):string;//s1-s2
+  procedure preparenumber(var s:string;n:integer);
+  procedure convertnumber(var s:string;n:integer);
+  function sum(s1,s2:string;n:integer):string;
+  function divbin(s1,s2:string;n:integer):string;
+  function binmul(s1,s2:string;n:integer):string;
+  procedure clear(var s:string);
+  procedure LogicShr(var s:string);
+  procedure LogicShl(var s:string);
+  procedure ArifmShl(var s:string);
+  procedure ArifmShr(var s:string);
+  procedure LoopShr(var s:string);
+  procedure LoopShl(var s:string);
+  procedure Push(var a:tstack;b:troperation);
+  procedure Pop(var a:tstack;var b:troperation);
+  function GetNumber(s:string;var i:integer):integer;
+  procedure Mul(var snum,sop:tstack;s:troperation;n:integer);
+  procedure division(var snum,sop:tstack;s:troperation;n:integer);
+  procedure Pnot(var snum,sop:tstack;s:troperation);
+  procedure PShale(var snum,sop:tstack;s:troperation;sh_f:shale);
+  procedure Pand(var snum,sop:tstack;s:troperation);
+  procedure Psum(var snum,sop:tstack;s:troperation;n:integer);
+  procedure PSub(var snum,sop:tstack;s:troperation;n:integer);
+  procedure Por(var snum,sop:tstack;s:troperation);
+  procedure Pxor(var snum,sop:tstack;s:troperation);
+  procedure Count(s:troperation;var snum,sop:tstack;n:integer;shl_f,shr_f:shale);
+  procedure PlaceOrCount(var snum,sop:tstack;current:troperation;n:integer;shl_f,shr_f:shale);
+  function GetResult(var snum,sop:tstack;var s:string;n:integer;shl_f,shr_f:shale;countsys:integer):string;
+  function CheckString(var s:string;n:integer):boolean;
+  procedure disposestack(a:tstack);
+
+
+{priority table
+not:4;
+*,/,div,mod,and,shl,shr:3;
++,-,or,xor:2;
+=,<>,<=,>=:1;}
+
+var snum,sop:tstack;
+n,CountSystem:integer;
+shl_f:shale;
+shr_f:shale;
+bufs:string;
+zerodivideflag:boolean;
+outofshale:boolean;
+
+implementation
+ procedure reversestr(var s:string);
+var k:string;
+i,j:integer;
+begin
+  i:=0;
+  k:=copy(s,1,length(s));
+  for j := length(s) downto 1 do
+   begin
+      inc(i);
+      s[i]:=k[j];
+   end;
+end;
+///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+function sor(s1,s2:string):string;
+var bufs:string;
+i:integer;
+begin
+bufs:='';
+preparenumber(s1,n);
+preparenumber(s2,n);
+   for i := 1 to length(s1) do
+   begin
+      if (s1[i]='0') and (s2[i]='0') then
+      bufs:=bufs+'0'
+      else
+      bufs:=bufs+'1';
+   end;
+result:=bufs;
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+function sxor(s1,s2:string):string;
+var  bufs:string;
+i:integer;
+begin
+preparenumber(s1,n);
+preparenumber(s2,n);
+    bufs:='';
+    for i := 1 to length(s1) do
+    begin
+        if (s1[i]=s2[i]) then
+        bufs:=bufs+'0'
+        else
+        bufs:=bufs+'1';
+    end;
+result:=bufs;
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+function sand(s1,s2:string):string;
+var i:integer;
+bufs:string;
+begin
+bufs:='';
+preparenumber(s1,n);
+preparenumber(s2,n);
+  for i := 1 to Length(s1) do
+  begin
+      if (s1[i]='1') and (s2[i]='1') then
+      bufs:=bufs+'1'
+      else
+      bufs:=bufs+'0';
+  end;
+result:=bufs;
+end;
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+function indec(a:string;curr:integer):integer;
+var i:integer;
+x,y:integer;
+res:string;
+begin
+x:=0;
+y:=1;
+a:=uppercase(a);
+    if curr<=10 then
+    begin
+    res:=a;
+    for i := length(res)-1 downto 0 do
+      begin
+       x:=x+ strtoint(res[i+1])*y;
+       y:=y*curr;
+      end;
+    end
+    else
+    begin
+      res:=a;
+      for i := length(res)-1 downto 0 do
+      begin
+        if (ord(res[i+1])>=ord('0')) and (ord(res[i+1])<=ord('9'))  then
+        begin
+          x:=x+ strtoint(res[i+1])*y;
+          y:=y*curr;
+        end
+        else
+        begin
+          x:=x+ (ord(res[i+1])-ord('A')+10)*y;
+          y:=y*curr;
+        end;
+      end;
+    end;
+ result:=x;
+end;
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+function convertss(a:string;curr:integer;n:integer):string;
+var x:integer;
+k:boolean;
+begin
+result:='';
+x:=indec(a,curr);
+   if x<n  then k:=true
+   else k:=false ;
+   if n<10 then
+   begin
+   while ((x div n)<>0) or (k=true) do
+      begin
+          result:=result+inttostr(x mod n);
+          x:=x div n;
+          k:=false;
+      end;
+   if (x mod n <>0) then
+   begin
+   result:=result+inttostr(x mod n);
+   reversestr(result);
+   end
+   else
+   reversestr(result);
+   end
+   else
+   begin
+     while (x>=n-1) or (k=true) do
+     begin
+       if ((x mod n)<=9) then
+        begin
+          result:=result+inttostr(x mod n);
+          x:=x div n;
+       end
+       else
+       begin
+         result:=result+chr(ord('A')-1 + (( x mod n)-9));
+         x:=x div n;
+       end;
+       k:=false;
+     end;
+   if (x mod n <>0) then
+   begin
+   if ((x mod n)<=9) then
+   begin
+          result:=result+inttostr(x mod n);
+      end
+   else
+   begin
+         result:=result+chr(ord('A')-1 + (( x mod n)-9));
+
+   end;
+
+   reversestr(result);
+   end
+   else
+   reversestr(result);
+   end;
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+function diff(s1,s2:string;n:integer):string;//s1-s2
+var bufs:string;
+i,j:integer;
+begin
+preparenumber(s1,n);
+preparenumber(s2,n);
+bufs:='';
+for i := 1 to n do
+bufs:=bufs+'0';
+i:=n;
+  while i>=1 do
+  begin
+    if (s1[i]='0') and (s2[i]='1') then
+    begin
+        j:=i;
+        while (j>=1) and (s1[j]<>'1')  do
+        begin
+          dec(j);
+        end;
+        if j=0 then
+        begin
+            for j := 1 to i-1 do
+            begin
+                s1[j]:='1';
+            end;
+        bufs[i]:='1';
+        end
+        else
+        begin
+            s1[j]:='0';
+            inc(j);
+            while j<>i do
+            begin
+                s1[j]:='1';
+                inc(j);
+            end;
+            bufs[i]:='1';
+        end;
+    end
+    else if (s1[i]='1') and (s2[i]='0') then
+    begin
+        bufs[i]:='1';
+    end
+    else
+    bufs[i]:='0';
+    dec(i);
+  end;
+  result:=bufs;
+end;
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+procedure preparenumber(var s:string;n:integer);
+var i:integer;
+begin
+ if length(s)<n then
+ begin
+     i:=n-length(s);
+     while i<>0 do
+     begin
+       s:='0'+s;
+       dec(I);
+     end;
+ end;
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+procedure convertnumber(var s:string;n:integer);
+var i:integer;
+begin
+preparenumber(s,n);
+    for i := 1 to length(s) do
+    begin
+        if s[i]='0' then
+        s[i]:='1'
+        else
+        s[i]:='0';
+    end;
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+function sum(s1,s2:string;n:integer):string;
+var bufs:string;
+i:integer;
+memory:integer;
+begin
+preparenumber(s1,n);
+preparenumber(s2,n);
+ bufs:='';
+for i := 1 to n do
+bufs:=bufs+'0';
+memory:=0;
+   for i := length(s1) downto 1 do
+   begin
+     if (s1[i]='0') and (s2[i]='0') then
+     begin
+      if memory=0 then
+        bufs[i]:='0'
+      else
+      begin
+        bufs[i]:='1';
+        dec(memory);
+      end;
+     end
+      else if ((s1[i]='1') and (s2[i]='0'))  or ((s2[i]='1') and (s1[i]='0'))then
+      begin
+        if memory=0 then
+        bufs[i]:='1'
+        else
+        begin
+          bufs[i]:='0';
+        end;
+      end
+      else
+      begin
+        if memory=1 then
+        bufs[i]:='1'
+        else
+        bufs[i]:='0';
+        memory:=1;
+      end;
+   end;
+result:=bufs;
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+function divbin(s1,s2:string;n:integer):string;
+var bufs:string;
+n1,n2,res:integer;
+begin
+res:=0;
+preparenumber(s1,n);
+preparenumber(s2,n);
+if s1[1]='0' then
+    n1:=indec(s1,2)
+else
+begin
+   s1:=diff(s1,'00000001',n);
+   convertnumber(s1,n);
+   n1:=-indec(s1,2);
+end;
+if s2[1]='0' then
+    n2:=indec(s2,2)
+else
+begin
+   s2:=diff(s2,'00000001',n);
+   convertnumber(s2,n);
+   n2:=-indec(s2,2);
+end;
+if n2=0 then
+bufs:='zerodivide'
+else
+res:=n1 div n2;
+if bufs='zerodivide' then
+result:=bufs
+else
+begin
+ if res>=0 then
+    result:=convertss(inttostr(res),10,2)
+ else
+ begin
+    res:=abs(res);
+    result:=convertss(inttostr(res),10,2);
+    convertnumber(result,n);
+    result:=sum(result,'1',n);
+  //  delete(result,1,8);
+ end;
+end;
+end;
+////////////////////////////////////////////////
+procedure clear(var s:string);
+var j:integer;
+begin
+   for j := 1 to length(s) do
+   s[j]:='0';
+end;
+///////////////////////////////////////////////
+function binmul(s1,s2:string;n:integer):string;
+var i,j:integer;
+bufs,ch,resstr,number1,number2:string;
+begin
+bufs:='';
+preparenumber(s1,n);
+preparenumber(s2,n);
+for i:=1 to N do
+bufs:=bufs+'0';
+resstr:='';
+  for i := length(s1) downto 1 do
+  begin
+      if s1[i]='1' then
+      begin
+        for j:=1 to length(s2) do
+        begin
+           bufs[j]:=s2[j];
+        end;
+        resstr:=resstr+bufs+'+';
+        clear(bufs);
+        bufs:=bufs+'0';
+      end
+      else
+      begin
+        clear(bufs);
+        resstr:=resstr+bufs+'+';
+        bufs:=bufs+'0';
+      end;
+  end;
+delete(resstr,length(resstr),1);
+    while pos('+',resstr)<>0 do
+    begin
+    resstr:=resstr+'+';
+    number1:='';
+    number2:='';
+       i:=1;
+       while resstr[i]<>('+') do
+       begin
+         number1:=number1+resstr[i];
+         inc(i);
+       end;
+       inc(i);
+       while resstr[i]<>('+') do
+       begin
+         number2:=number2+resstr[i];
+         inc(i);
+       end;
+       delete(resstr,1,i-1);
+       ch:=sum(number1,number2,2*n);
+       resstr:=ch+resstr;
+       delete(resstr,length(resstr),1);
+    end;
+delete(resstr,1,n);
+result:=resstr;
+end;
+///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+procedure LogicShr(var s:string);
+var i:integer;
+begin
+preparenumber(s,n);
+
+   for i := Length(s) downto 2 do
+   begin
+      s[i]:=s[i-1];
+   end;
+ s[1]:='0';
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure LogicShl(var s:string);
+var i:integer;
+begin
+preparenumber(s,n);
+  for i := 1 to length(s)-1 do
+  begin
+      s[i]:=s[i+1];
+  end;
+ s[length(s)]:='0';
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+procedure ArifmShl(var s:string);
+var i:integer;
+begin
+  for i := 1 to length(s)-1 do
+  begin
+      s[i]:=s[i+1];
+  end;
+  s[length(s)]:='0';
+end;
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+procedure ArifmShr(var s:string);
+var i:integer;
+begin
+preparenumber(s,n);
+  for i := length(s) downto 2 do
+  begin
+      s[i]:=s[i-1];
+  end;
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure LoopShr(var s:string);
+var i:integer;
+last:char;
+begin
+preparenumber(s,n);
+  last:=s[length(s)];
+   for i := Length(s) downto 2 do
+   begin
+      s[i]:=s[i-1];
+   end;
+ s[1]:=last;
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure LoopShl(var s:string);
+var i:integer;
+first:char;
+begin
+preparenumber(s,n);
+ first:=s[1];
+ for i := 1 to length(s)-1 do
+ begin
+   s[i]:=s[i+1];
+ end;
+s[length(s)]:=first;
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+procedure Push(var a:tstack;b:troperation);
+var new_elem:tstack;
+begin
+ new(new_elem);
+ new_elem^.next:=a;
+ a := new_elem;
+ a^.data := b.data;
+ a^.priority:=b.priority;
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+procedure Pop(var a:tstack;var b:troperation);
+var temp:tstack;
+begin
+ temp:=a;
+ b.data:=a^.data;
+ b.priority:=a^.priority;
+ a:=a^.next;
+ dispose(temp);
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+function GetNumber(s:string;var i:integer):integer;
+var res:string;
+begin
+res:='';
+  while (i<=length(s)) and ((s[i]>='0') and (s[i]<='9')) do
+  begin
+     res:=res+s[i];
+     inc(i);
+  end;
+  result:=strtoint(res);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure Mul(var snum,sop:tstack;s:troperation;n:integer);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+      pop(sop,res);
+      pop(snum,y_s);
+      pop(snum,x_s);
+      res.data:=binmul(x_s.data,y_s.data,n);
+      push(snum,res);
+      push(sop,s);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure division(var snum,sop:tstack;s:troperation;n:integer);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+zerodivideflag:=false;
+    pop(sop,res);
+    pop(snum,y_s);
+    pop(snum,x_s);
+    res.data:=divbin(x_s.data,y_s.data,n);
+    if res.data='zerodivide' then
+      zerodivideflag:=true;
+    push(snum,res);
+    push(sop,s);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure Pnot(var snum,sop:tstack;s:troperation);
+var y_s:troperation;
+res:troperation;
+begin
+
+   pop(sop,res);
+   pop(snum,y_s);
+   convertnumber(y_s.data,n);
+   push(snum,y_s);
+   push(sop,s);
+end;
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+procedure PShale(var snum,sop:tstack;s:troperation;sh_f:shale);
+var x_s,y_s:troperation;
+y:integer;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   y:=strtoint(convertss(Y_s.data,2,10));
+   if y>=n then
+   outofshale:=true;
+   while y<>0 do
+   begin
+      sh_f(x_s.data);
+      dec(y);
+   end;
+
+   res:=x_s;
+   push(snum,res);
+   push(sop,s);
+end;
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+procedure Pand(var snum,sop:tstack;s:troperation);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   res.data:=sand(x_s.data,y_s.data);
+   push(snum,res);
+   push(sop,s);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure Psum(var snum,sop:tstack;s:troperation;n:integer);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   res.data:=sum(x_s.data,y_s.data,n);
+   push(snum,res);
+   push(sop,s);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure PSub(var snum,sop:tstack;s:troperation;n:integer);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   res.data:=diff(x_s.data,y_s.data,n);
+   push(snum,res);
+   push(sop,s);
+end;
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure Por(var snum,sop:tstack;s:troperation);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   res.data:=sor(x_s.data,y_s.data);
+   push(snum,res);
+   push(sop,s);
+end;
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+procedure Pxor(var snum,sop:tstack;s:troperation);
+var x_s,y_s:troperation;
+res:troperation;
+begin
+   pop(sop,res);
+   pop(snum,y_s);
+   pop(snum,x_s);
+   res.data:=sxor(x_s.data,y_s.data);
+   push(snum,res);
+   push(sop,s);
+end;
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+procedure Count(s:troperation;var snum,sop:tstack;n:integer;shl_f,shr_f:shale);
+begin
+     if sop^.data='*' then
+       mul(snum,sop,s,n)
+    else if sop^.data='/' then
+      division(snum,sop,s,n)
+    else if sop^.data='NOT' then
+       pnot(snum,sop,s)
+    else if sop^.data='AND' then
+       pand(snum,sop,s)
+    else if sop^.data='+' then
+       Psum(snum,sop,s,n)
+    else if sop^.data='-' then
+       Psub(snum,sop,s,n)
+    else if Lowercase(sop^.data)='or' then
+       Por(snum,sop,s)
+    else if Lowercase(sop^.data)='xor' then
+       Pxor(snum,sop,s)
+   else if Lowercase(sop^.data)='shl' then
+       begin
+         Pshale(snum,sop,s,shl_f);
+       end
+    else if Lowercase(sop^.data)='shr' then
+       begin
+         Pshale(snum,sop,s,shr_f);
+       end
+   end;
+/////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+procedure PlaceOrCount(var snum,sop:tstack;current:troperation;n:integer;shl_f,shr_f:shale);
+var pred:troperation;
+begin
+     if (sop<>nil) and (sop.data<>'(') and (sop.data<>')') then
+     begin
+      pred.priority:=sop^.priority;
+      if pred.priority>=current.priority then
+      begin
+        count(current,snum,sop,n,shl_f,shr_f);
+      end
+      else
+        push(sop,current);
+     end
+     else
+        push(sop,current);
+end;
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+function GetResult(var snum,sop:tstack;var s:string;n:integer;shl_f,shr_f:shale;countsys:integer):string;
+var i:integer;
+current,bufs,res:troperation;
+correctflag:boolean;
+const
+ForthPriorityS='not';
+ThirdPriorityS='*/ANDshlshr';
+SecondPriorityS='+-XOR';
+begin
+correctflag:=true;
+case countsys of
+     2:
+      begin
+       correctflag:=checkstring(s,n);
+      end;
+     8:
+      begin
+       s:=mathinoct(s,n,snum,sop,correctflag);
+       if correctflag=true then
+       correctflag:=checkstring(s,n);
+      end;
+     10:
+      begin
+        s:=mathinDecNew(s,n,snum,sop,correctflag);
+       if correctflag=true then
+       correctflag:=checkstring(s,n);
+      end;
+     16:
+      begin
+        s:=mathinHEx(s,n,snum,sop,correctflag);
+       if correctflag=true then
+       correctflag:=checkstring(s,n);
+      end;
+end;
+if correctflag=true then
+begin
+snum:=nil;
+sop:=nil;
+i:=1;
+zerodivideflag:=false;
+outofshale:=false;
+   while (i<=length(s)) and (zerodivideflag=false) do
+   begin
+   bufs.data:='';
+     if pos(s[i],'0123456789')<>0 then       //Если цифра,то находим полную цифру и помещаем ее в стек
+     begin
+          while pos(s[i],'01')<>0 do
+          begin
+            bufs.data:=bufs.data+s[i];
+            inc(i);
+          end;
+          preparenumber(bufs.data,n);
+          push(snum,bufs);
+       dec(i);
+     end
+     else
+     begin
+        bufs.data:='';
+        if (s[i]<>'(') and (s[i]<>')') then
+        begin
+            if pos(s[i],'*/+-')=0 then
+            begin
+                while (pos(s[i],'01()')=0)do  //Если нестандартная,то заносим проходим по буквам операции и помещаем их в  bufs
+                begin
+                     bufs.data:=bufs.data+s[i];
+                    inc(i);
+                end ;
+                dec(i);
+            end
+            else
+            begin
+               bufs.data:=s[i];                 //Если стандарная операция,то помещаем ее в bufs
+            end;
+            current.data:=bufs.data;
+            if pos(current.data,thirdprioritys)<>0 then   //Проверяем какой приоритетности операция
+                 current.priority:=3
+            else
+              if  pos(current.data,secondprioritys)<>0  then
+                 current.priority:=2
+            else
+              if pos(current.data,forthprioritys)<>0 then
+                  current.priority:=4;
+             placeorcount(snum,sop,current,n,shl_f,shr_f);//Ложим операцию в стек или считаем предыдущую операции и после этого ложим новую
+        end
+        else if (s[i]='(') then      //Если открывающаяся скобка
+        begin
+          bufs.data:='(';               //Ложим ее в стек
+          bufs.priority:=5;
+          push(sop,bufs);
+        end
+        else if (s[i]=')') then         //Если закрывающаяся, то считаем все до
+          begin
+              while sop^.data<>'(' do
+              begin
+                bufs.data:='';
+                count(bufs,snum,sop,n,shl_f,shr_f);
+                pop(sop,bufs);
+              end;
+              pop(sop,bufs);
+          end;
+     end;
+     inc(i);
+   end;
+if zerodivideflag=false then     //Если не было обноружено деление на ноль
+  begin
+      while (sop<>nil) and (zerodivideflag=false) do
+      begin
+         bufs.data:='';
+         count(bufs,snum,sop,n,shl_f,shr_f);//Считаем выражение
+         pop(sop,bufs);
+      end;
+    if zerodivideflag=false then     //Если не было обноружено деление на ноль
+    begin
+        pop(snum,res);
+        if length(res.data)<n then
+        begin
+          i:=n-length(res.data);
+          while i<>0 do
+          begin
+            res.data:='0'+res.data;
+            dec(I);
+          end;
+        end;
+        result:=(res.data);
+        if countsys=10 then
+        begin
+          if result[1]='0' then
+          begin
+            result:=inttostr(indec(result,2));
+          end
+          else
+          begin
+            result:=diff(result,'1',n);
+            convertnumber(result,n);
+            result:='-'+inttostr(indec(result,2));
+          end;
+        end
+        else
+        begin
+        s:=result;
+        result:=convertss(result,2,countsys);
+        end;
+    end
+    else result:='Деление на 0 невозмонжно';
+    if (outofshale=true) and (result<>'Деление на 0 невозмонжно') then //если был выполнен сдвиг на слишком большое количество битов
+    begin
+      result:='Результат неопределен';
+    end;
+  end
+else
+result:='Деление на 0 невозмонжно';
+end
+else
+result:='Ошибка!';
+
+end;
+/////////////////////////////////////////////////////////////////
+procedure disposestack(a:tstack);
+var t,next:tstack;
+begin
+  t:=a;
+  while t<>nil do
+  begin
+      next:=t^.next;
+      dispose(t);
+      t:=next;
+  end;
+end;
+////////////////////////////////////////////////////////////////
+function CheckString(var s:string;n:integer):boolean;
+var bracket:tstack;
+bracketflag:boolean;
+i,j:integer;
+bufs:troperation;
+begin
+//s:=s+' ';
+result:=true;
+bracket:=nil;
+I:=1;
+bracketflag:=true;
+if s=' ' then
+result:=true
+else
+ begin
+ while (i<=length(s)) and (result=true) do
+  begin
+    result:=false;
+    if ((i=1) and ((s[i]='+') or (s[i]='-'))) or ((i>1) and ((s[i]='+') or (s[i]='-')) and (s[i-1]='(')) then
+    begin
+    if length(s)=1 then
+    begin
+      result:=false;
+    end
+    else
+    begin
+      insert('0',s,i);
+      inc(i);
+      result:=true;
+    end;
+    end;
+    if (s[i]='(')  then
+    begin
+          bufs.data:=')';
+          push(bracket,bufs);
+          result:=true;
+    end
+    else if (s[i]=')') then
+    begin
+    if bracket<>nil then
+    begin
+      result:=true;
+      pop(bracket,bufs)
+    end
+    else
+    begin
+      result:=true;
+      bracketflag:=false;
+    end;
+    end;
+    if pos(s[i],'23456789')<>0 then
+    result:=false;
+    if (i<>length(s)) and (result=false) and (pos(s[i],'+-*/')<>0) and ((pos(s[i+1],'+-*/)')=0) and (pos(s[i-1],'+-*/(')=0)) then
+      result:=true;
+    if (result=false)  and (pos(s[i],'01')<>0)  then
+    begin
+      j:=1;
+      if (i>1) and (s[i-1]=')') then
+      result:=false
+      else
+      begin
+        while (i<=length(s)) and (pos(s[i],'01')<>0) do
+        begin
+          inc(j);
+          inc(i);
+        end;
+        dec(j);
+        if j>n then
+          result:=false
+        else
+          result:=true;
+        if s[i]='(' then
+          result:=false;
+        dec(i);
+      end;
+    end;
+    if (i<>length(s))and (result=false) and ((upcase(s[i])='N') and (upcase(s[i+1])='O') and (upcase(s[i+2])='T'))    then
+    begin
+       if (i<>1) and (pos(s[i-1],'(+-*/')<>0) and (pos(s[i+3],'(10')<>0) then
+       begin
+         inc(i,2);
+         result:=true;
+       end
+       else if ( i=1) and (pos(s[i+3],'(10')<>0) then
+       begin
+         inc(i,2);
+         result:=true;
+       end
+       else
+       result:=false;
+    end;
+    if (i<>length(s)) and (result=false) and ((upcase(s[i])='X') and (upcase(s[i+1])='O') and (upcase(s[i+2])='R') )   then
+    begin
+       if ((pos(s[i-1],')10')<>0) or (pos(s[i+3],'(10')<>0)) then
+        begin
+          inc(i,2);
+          result:=true;
+        end
+        else
+        result:=false;
+    end;
+    if (i<>length(s)) and (result=false) and ((upcase(s[i])='O') and (upcase(s[i+1])='R') )   then
+    begin
+      if ((pos(s[i-1],')10')<>0) and (pos(s[i+2],'(10')<>0)) then
+      begin
+        inc(i,1);
+        result:=true;
+      end
+        else
+        result:=false;
+    end;
+    if (result=false) and (upcase(s[i])='A') then
+    begin
+      if (i<length(s)-1)and (upcase(s[i+1])='N') and (upcase(s[i+2])='D') and (pos(s[i-1],')10')<>0)and (pos(s[i+3],'(10')<>0) then
+      begin
+        result:=true;
+        inc(i,2);
+      end
+      else
+      result:=false;
+    end;
+      if (i<length(s)-1)and(upcase(s[i])='S')  then
+      begin
+        if (upcase(s[i+1])='H') and ((upcase(s[i+2])='L') or (upcase(s[i+2])='R')) and (pos(s[i-1],')10')<>0)   then
+         begin
+           result:=true;
+           inc(i,2);
+         end;
+      end;
+    inc(i);
+  end;
+         if (bracket<>nil) or (bracketflag=false) then
+   result:=false
+   else
+   begin
+     if (pos('1',s)=0) and (pos('0',s)=0) then
+     result:=false;
+   end;
+ end;
+disposestack(bracket);
+end;
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+function MathInOct(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+var i:integer;
+bufs,number:string;
+begin
+  corflag:=true;
+  bufs:='';
+  i:=1;
+  while (i<=length(s)) and ((pos(upcase(s[i]),'+()-*/01234567ANDXORTSHL')<>0)) do
+inc(i);
+if (i<=length(s)) or (s='') then
+corflag:=false;
+i:=1;
+ while (corflag=true) and (i<=length(s)) do
+ begin
+    if pos(s[i],'01234567')<>0 then
+    begin
+    number:='';
+      while (i<=length(s)) and (pos(s[i],'01234567')<>0 ) do
+      begin
+        number:=number+s[i];
+        inc(i)
+      end;
+      dec(i);
+      if (length(number)>5) then
+      begin
+        if number[1]='1' then
+         bufs:=bufs+convertss(number,8,2)
+        else
+        corflag:=false;
+      end
+      else
+      bufs:=bufs+convertss(number,8,2);
+    end
+    else
+    bufs:=bufs+s[i];
+    inc(i);
+ end;
+ if corflag=true then
+ result:=bufs
+ else
+ result:='false';
+end;
+function MathInHEX(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+var i:integer;
+bufs,number:string;
+sindec:string;
+hex_n:integer;
+begin
+i:=1;
+corflag:=true;
+while (i<=length(s)) and ((pos(upcase(s[i]),'()+-*/0123456789ANDXORBCETFSHL')<>0)) do
+inc(i);
+if (i<=length(s)) or (s='') then
+corflag:=false;
+ hex_n:=n div 4;
+sindec:='';
+i:=1;
+while (i<=length(s)) and (corflag=true) do
+begin
+if (s[i]='A') or (s[i]='N') then
+begin
+  if (i<length(s)-1) and (s[i+1]='N' ) or (s[i+1]='O') then
+  begin
+    if (s[i]='A') and (s[i+1]='N') then
+     begin
+       sindec:=sindec+'AND';
+       inc(i,2);
+     end
+    else
+     if (s[i]='N') and (s[i+1]='O') then
+     begin
+       sindec:=sindec+'NOT';
+       inc(i,2);
+     end;
+  end
+  else
+  begin
+  if s[i]='N' then
+  corflag:=false
+  else
+    begin
+       number:='';
+       while (i<=length(s)) and (pos(s[i],'0123456789ABCDEF')<>0) and (s[i+1]<>'N')   do
+       begin
+           number:=number+s[i];
+           inc(i);
+       end;
+       if length(number)>hex_n then
+       corflag:=false;
+       sindec:=sindec+convertss(number,16,10);
+       dec(i);
+    end;
+  end;
+end
+else
+ if (pos(upcase(s[i]),'0123456789BCDEF')<>0) then
+ begin
+      number:='';
+       while (i<=length(s)) and (pos(s[i],'0123456789ABCDEF')<>0)  do
+       begin
+           number:=number+s[i];
+           inc(i);
+       end;
+       if length(number)>hex_n then
+       corflag:=false;
+       sindec:=sindec+convertss(number,16,10);
+       dec(i);
+ end
+ else
+ sindec:=sindec+s[i];
+ inc(i);
+end;
+i:=1;
+bufs:='';
+while (i<=length(sindec)) and (corflag=true) do
+begin
+ if pos(sindec[i],'0123456789')<>0 then
+ begin
+    number:='';
+    while (i<=length(Sindec)) and (pos(sindec[i],'0123456789')<>0) do
+    begin
+      number:=number+sindec[i];
+      inc(i);
+    end;
+    dec(i);
+    bufs:=bufs+convertss(number,10,2)
+ end
+ else
+ bufs:=bufs+sindec[i];
+ inc(i);
+end;
+if corflag=true then
+ result:=bufs
+ else
+ result:='false';
+end;
+function MathInDecNew(s:string;n:integer;snum,sop:tstack;var corflag:boolean):string;
+var maxn,minn,i:integer;
+bufs,number:string;
+begin
+maxn:=0;
+minn:=0;
+if n=8 then
+begin
+  maxn:=127;
+  minn:=-128;
+end;
+if n=16 then
+begin
+  maxn:=32767;
+  minn:=-32768;
+end;
+if n=32 then
+begin
+  maxn:=2147483647;
+  minn:=-2147483648;
+end;
+i:=1;
+bufs:='';
+corflag:=true;
+while (i<=length(s)) and ((pos(upcase(s[i]),'()+-*/0123456789ANDXORTSHL')<>0)) do
+inc(i);
+if (i<=length(s)) or (s='') then
+corflag:=false;
+i:=1;
+while (i<=length(s)) and (corflag=true) do
+begin
+ if pos(s[i],'0123456789')<>0 then
+ begin
+    number:='';
+    while (i<=length(S)) and (pos(s[i],'0123456789')<>0) do
+    begin
+      number:=number+s[i];
+      inc(i);
+    end;
+    dec(i);
+    if  (strtoint(number)<=maxn)  and (strtoint(number)>=minn) then
+    bufs:=bufs+convertss(number,10,2)
+    else
+    corflag:=false;
+ end
+ else
+ bufs:=bufs+s[i];
+ inc(i);
+end;
+if corflag=true then
+ result:=bufs
+ else
+ result:='false';
+end;
+
+end.
